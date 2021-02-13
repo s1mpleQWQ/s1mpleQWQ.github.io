@@ -4,7 +4,7 @@
     <title>Hello World</title>
     <url>/post/4a17b156/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<!--- more --->
+<a id="more"></a>
 
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -14,6 +14,123 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>java环境配置</title>
+    <url>/post/61528/</url>
+    <content><![CDATA[<h1 id="1-JDK的下载"><a href="#1-JDK的下载" class="headerlink" title="1.JDK的下载"></a><strong>1.JDK的下载</strong></h1><p>在Oracle官网可以下载JDK（Java Development Kit）中文叫java工具集，因为官网的资料是一手的所以建议大家从官网获取软件包。从其他地方获取的并非不可靠，但是免费的开源软件包建议大家都从对应的官方网站进行下载。<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">点击链接</a>跳转到对应的页面。选择对应的系统进行下载， </p>
+<a id="more"></a>
+
+<p>比如我是windows系统就选择Windows对应的那个JDK。还有，注意下载JDK版本的位数，如果文件名中有32这串数字的话，那代表这个JDK是32位的，现在大多数操作系统都是64位的，所以建议大家下载64位的JDK。还有个小问题，就是大家下载的时候需要把decline变为accpet,这两者的意思大家都明白。</p>
+<p><img src="https://img-blog.csdn.net/20180601065559541?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<h1 id="2-JDK的安装"><a href="#2-JDK的安装" class="headerlink" title="2.JDK的安装"></a><strong>2.JDK的安装</strong></h1><p>JDK下载完成之后我们就直接打开下载好的安装程序。（我并未用最新的JDK做演示）</p>
+<p><img src="https://img-blog.csdn.net/20180601070039984?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>单击下一步。</p>
+<p><img src="https://img-blog.csdn.net/20180601070147339?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>单击更改，到这里我们需要更改一下安装路径，可以是任何一个盘的任何一个不含空格路径的文件夹，为了方便起见我就直接把中间的Program Files给删掉了。效果如下</p>
+<p><img src="https://img-blog.csdn.net/20180601070351864?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>然后下一步</p>
+<p><img src="https://img-blog.csdn.net/20180601070440728?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>等待进度条加载满会弹出一个选择</p>
+<p><img src="https://img-blog.csdn.net/20180601070544844?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>这里我们依然将Program文件路径删除，但是我们发现会有问题</p>
+<p><img src="https://img-blog.csdn.net/2018060107073879?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>我的解决思路是在java文件夹下新建一个文件夹取名为jre，然后更改为C:Java\jre</p>
+<p><img src="https://img-blog.csdn.net/20180601070851787?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>最后，等待安装完成。</p>
+<p><img src="https://img-blog.csdn.net/20180601070945289?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="https://img-blog.csdn.net/20180601070958229?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<h1 id="3-JDK环境变量的配置"><a href="#3-JDK环境变量的配置" class="headerlink" title="3.JDK环境变量的配置"></a><strong>3.JDK环境变量的配置</strong></h1><p>相信大家也有疑惑，我怎么看不见Java的快捷方式图标呢，为什么我的桌面没有Java程序呢，现在让我来告诉你答案。作为开发学习者，我们忽略了一个重要的东西，java是一个开源平台不是提供音视频、聊天的平台（这只是我个人的看法）。简单来说，JDK是一款非常强大的工具集，我们要使用Java的话就需要安装一些支持Java编程软件eclipse、intellj idea等。然后我们进入正题，来配置环境变量。</p>
+<p>右击我的电脑-&gt;高级系统设置-&gt;环境变量-&gt;新建系统变量-&gt;将新建系统变量添加到path里面去。</p>
+<p><img src="https://img-blog.csdn.net/20180601071804415?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="https://img-blog.csdn.net/20180601071947532?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>java的安装路径包不要搞混了</p>
+<p><img src="https://img-blog.csdn.net/20180601072222390?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>找到Path系统变量，点击编辑，然后点击新建。输入%JAVA_HOME%bin。</p>
+<p><img src="https://img-blog.csdn.net/20180601072346832?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>完成了之后需要一步一步点确定，直到确定完成才可以说环境变量配置完成。不然的话，就需要重新配置。就好比写Word的时候搞忘了保存而直接关闭，但是word比较人性化退出时候有提示，这个的话需要大家有耐心的做完每一步工作。科普一下，我们如何做到不点击QQ程序图标，就做到命令行打开QQ？找到QQ所在文件夹的bin目录，复制其路径将它添加到Path变量中。由此可得，其他程序亦是如此。</p>
+<h1 id="4-检查是否配置成功。"><a href="#4-检查是否配置成功。" class="headerlink" title="4.检查是否配置成功。"></a>4.检查是否配置成功。</h1><p>win+R 输入cmd -&gt; javac -version</p>
+<p><img src="https://img-blog.csdn.net/20180601072745378?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>如果出现</p>
+<p><img src="https://img-blog.csdn.net/20180601072823546?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>那么就是环境变量没保存，需要进行步骤3的配置，然后就可以进入java语言的学习了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>java环境配置</title>
+    <url>/post/0/</url>
+    <content><![CDATA[<p>安装nodejs方式有很多种。</p>
+<a id="more"></a>
+
+<p><strong>第一种：官网下载</strong><br> 通过<a href="https://nodejs.org/en/">nodejs官网</a>下载安装 ，但有个缺陷，不同版本的nodejs无法顺利的切换。</p>
+<p><strong>第二种: NVM安装</strong><br> NVM可以帮助我们快速切换 node版本。但是安装NVM过程中有很多坑，网上找了很多文档都没解决问题。这里自己总结下，帮助大家顺利安装软件。</p>
+<h3 id="一、-下载nvm安装包"><a href="#一、-下载nvm安装包" class="headerlink" title="一、 下载nvm安装包"></a>一、 下载nvm安装包</h3><p><strong>1. 下载地址</strong><br> github上下载最新版本:<a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<p> 推荐下载第三个包：nvm-setup.zip<br><img src="https://img-blog.csdnimg.cn/20190115133257742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li><p>成功安装的nvm标志<br>命令行：nvm</p>
+<p>成功出现下面的代码<br><img src="https://img-blog.csdnimg.cn/2019011513330537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<h3 id="二、配置淘宝镜像"><a href="#二、配置淘宝镜像" class="headerlink" title="二、配置淘宝镜像"></a>二、配置淘宝镜像</h3><p> 由于nvm默认的下载地址<a href="http://nodejs.org/dist/%E6%98%AF%E5%A4%96%E5%9B%BD%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E5%9B%A0%E8%80%8C%E5%8F%AF%E4%BB%A5%E5%88%87%E6%8D%A2%E5%88%B0%E6%B7%98%E5%AE%9D%E7%9A%84%E9%95%9C%E5%83%8F%EF%BC%8C%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%9A%E5%BF%AB%E5%BE%88%E5%A4%9A%E3%80%82">http://nodejs.org/dist/是外国外服务器，速度非常慢，因而可以切换到淘宝的镜像，下载速度会快很多。</a></p>
+<p><strong>配置方法：</strong></p>
+<p> 打开nvm的安装路径，默认安装路径是：C:\Users\zhong\AppData\Roaming\nvm</p>
+<p> 打开settings.txt，加入下面文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	root: C:\Users\zhong\AppData\Roaming\nvm  </span><br><span class="line">	path: C:\Program Files\nodejs </span><br><span class="line">	arch: 64 </span><br><span class="line">	proxy: none</span><br><span class="line">	node_mirror: http:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">	npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br><span class="line">123456</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20190116125742381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190116125800543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="三、-安装node"><a href="#三、-安装node" class="headerlink" title="三、 安装node"></a>三、 安装node</h3><ol>
+<li><p><strong>nvm安装命令：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> nvm  install version    </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<p>version就是要安装的nodejs版本，官网可以查询到。</p>
+<p>比如：<br>nvm install v11.6.0<br>nvm install 11.6.0</p>
+</li>
+<li><p><strong>安装过程中关键点：</strong></p>
+</li>
+</ol>
+<p>   Downloading 代表正在下载npm，一定要等下载完，不然会发现npm将无法使用。<br><img src="https://img-blog.csdnimg.cn/20190116130110558.png" alt="在这里插入图片描述"></p>
+<p>   Installation complete 代表nodejs安装完成<br><img src="https://img-blog.csdnimg.cn/20190116130201729.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>ps：</strong><br> 如果第二步没有设置淘宝镜像，下载速度会很慢。就会像我之前一样，以为安装好了nodejs，就着急的关闭了命令行。最后发现npm却无法适应，找了很久才发现是npm没下完。</p>
+<h3 id="四、-切换nodejs版本"><a href="#四、-切换nodejs版本" class="headerlink" title="四、 切换nodejs版本"></a>四、 切换nodejs版本</h3><ol>
+<li><strong>查询所有的nodejs版本</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nvm list </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<p>nvm list 查看当前安装的所有nodejs版本<br><img src="https://img-blog.csdnimg.cn/20190115133437761.png" alt="在这里插入图片描述"></p>
+<ol>
+<li><strong>切换nodojs命令</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nvm  use  version  </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<p>比如：<br>nvm use 11.6.0</p>
+<p>这样就切换到了11.6.0版本的nodejs了</p>
+<p>版本号前出现*代表为当前使用的nodejs版本</p>
+<h3 id="五、配置环境变量"><a href="#五、配置环境变量" class="headerlink" title="五、配置环境变量"></a>五、配置环境变量</h3><p> 为了全局使用nvm命令，就需要配置下环境变量。</p>
+<p>这里以win10为例，win7大同小异</p>
+<p><strong>1. 环境变量地址：</strong><br>点击我的电脑》属性》高级设置》环境变量》环境变量配置：点击我的电脑》属性》高级设置》环境变量》</p>
+<p><strong>2. 删除系统变量</strong><br> a. 找到系统变量<br>   删除系统自带的nvm变量：NVM_HOME和NVM_SYMLINK</p>
+<p> b. 打开path：删除nvm自动添加的变量<br>  Path = %NVM_HOME%;%NVM_SYMLINK%</p>
+<p><strong>3. 配置用户变量：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NVM_HOME &#x3D; C:\Users\zhong\AppData\Roaming\nvm          </span><br><span class="line">NVM_SYMLINK &#x3D; C:\Program Files\nodejs </span><br><span class="line">Path &#x3D; %NVM_HOME%;%NVM_SYMLINK%</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<h3 id="六、测试node，npm是否安装成功"><a href="#六、测试node，npm是否安装成功" class="headerlink" title="六、测试node，npm是否安装成功"></a>六、测试node，npm是否安装成功</h3><p>依次执行node，npm命令，出现下面结果代表成功了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node</span><br><span class="line">npm</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/2019011613214686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>到这里，nvm，node，npm就都安装成功了。安装失败往往是npm没有下载成功，或者环境变量没有设置成功，多尝试几次就好。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>kali开启root</title>
+    <url>/post/0/</url>
+    <content><![CDATA[<p>出于对渗透系统的安全考虑，Kali　Linux中默认无root用户权限，下面小编将给确实需要使用的用户带来Kali-2020开始root权限教程。</p>
+<a id="more"></a>
+
+<p>1、Vmware中启动系统,当出现如下图启动界面时按“E”键，注意要快，如果没赶上则重新启动客户机，重复上述操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716205214199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>2、操作1成功后进入如（图1）界面，将光标下移至linux，如（图2），将ro修改为rw，在splash后添加 /init=/bin/bash，注意splash和init之间要加空格。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716205423188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img">   <img src="https://img-blog.csdnimg.cn/20200716205933998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>​                （图1）                                            （图2）</p>
+<p>修改后的界面如（图3）所示： </p>
+<p><img src="https://img-blog.csdnimg.cn/20200716210138655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>3、按F10保存，进入单用户模式，在root@（none）：/# 输入passwd，后面在New password：后设置root用户的密码，Retype new password:后重复输入密码确认。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716210440801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>4、完成上述操作后重启客户机即可。</p>
 ]]></content>
   </entry>
 </search>

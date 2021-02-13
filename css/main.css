@@ -1252,7 +1252,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffdbe9;
+  background: #8ac371;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2770,11 +2770,10 @@ a:hover,
 span.exturl:hover {
   color: #ff106c;
 }
-body {
+bbody {
   background: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
   background-position: 50% 50%;
 }
 .content-wrap {
@@ -2894,7 +2893,7 @@ code {
   color: #fff;
 }
 body {
-  background: url("/images/yourbackground.jpg");
+  background: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

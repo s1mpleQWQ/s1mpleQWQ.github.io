@@ -58,6 +58,24 @@
 ]]></content>
   </entry>
   <entry>
+    <title>kali开启root</title>
+    <url>/post/0/</url>
+    <content><![CDATA[<p>出于对渗透系统的安全考虑，Kali　Linux中默认无root用户权限，下面小编将给确实需要使用的用户带来Kali-2020开始root权限教程。</p>
+<a id="more"></a>
+
+<p>1、Vmware中启动系统,当出现如下图启动界面时按“E”键，注意要快，如果没赶上则重新启动客户机，重复上述操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716205214199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>2、操作1成功后进入如（图1）界面，将光标下移至linux，如（图2），将ro修改为rw，在splash后添加 /init=/bin/bash，注意splash和init之间要加空格。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716205423188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img">   <img src="https://img-blog.csdnimg.cn/20200716205933998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>​                （图1）                                            （图2）</p>
+<p>修改后的界面如（图3）所示： </p>
+<p><img src="https://img-blog.csdnimg.cn/20200716210138655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>3、按F10保存，进入单用户模式，在root@（none）：/# 输入passwd，后面在New password：后设置root用户的密码，Retype new password:后重复输入密码确认。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716210440801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>4、完成上述操作后重启客户机即可。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>java环境配置</title>
     <url>/post/0/</url>
     <content><![CDATA[<p>安装nodejs方式有很多种。</p>
@@ -113,24 +131,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node</span><br><span class="line">npm</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/2019011613214686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>到这里，nvm，node，npm就都安装成功了。安装失败往往是npm没有下载成功，或者环境变量没有设置成功，多尝试几次就好。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>kali开启root</title>
-    <url>/post/0/</url>
-    <content><![CDATA[<p>出于对渗透系统的安全考虑，Kali　Linux中默认无root用户权限，下面小编将给确实需要使用的用户带来Kali-2020开始root权限教程。</p>
-<a id="more"></a>
-
-<p>1、Vmware中启动系统,当出现如下图启动界面时按“E”键，注意要快，如果没赶上则重新启动客户机，重复上述操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716205214199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>2、操作1成功后进入如（图1）界面，将光标下移至linux，如（图2），将ro修改为rw，在splash后添加 /init=/bin/bash，注意splash和init之间要加空格。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716205423188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img">   <img src="https://img-blog.csdnimg.cn/20200716205933998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>​                （图1）                                            （图2）</p>
-<p>修改后的界面如（图3）所示： </p>
-<p><img src="https://img-blog.csdnimg.cn/20200716210138655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>3、按F10保存，进入单用户模式，在root@（none）：/# 输入passwd，后面在New password：后设置root用户的密码，Retype new password:后重复输入密码确认。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716210440801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>4、完成上述操作后重启客户机即可。</p>
 ]]></content>
   </entry>
 </search>

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>hexo+next v7.8美化(1)</title>
-    <url>/post/0/</url>
+    <url>/post/b24ce228/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="1-下载主题"><a href="#1-下载主题" class="headerlink" title="1. 下载主题"></a>1. 下载主题</h1><p>最简单的安装方式就是直接克隆整个仓库：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 进入你的博客目录</span><br><span class="line">cd hexo</span><br><span class="line"># 将仓库复制到博客目录的 themes&#x2F;next 文件夹中</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
 <p>下载完成之后，可以在博客的 <code>themes</code> 文件夹中看到多了一个名为 <code>next</code> 的目录，这个目录就是主题仓库。</p>
@@ -106,12 +106,12 @@
 <h2 id="3-17-设置博客背景图片"><a href="#3-17-设置博客背景图片" class="headerlink" title="3.17 设置博客背景图片"></a>3.17 设置博客背景图片</h2><ul>
 <li>找到CSS存放位置： </li>
 </ul>
-<p><img src="/post/0/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214210504664.png" alt="image-20210214210504664"></p>
+<p><img src="/post/b24ce228/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214210504664.png" alt="image-20210214210504664"></p>
 <p>新建 <code>_other.styl</code> 文件，用来存放自己后面添加的CSS样式</p>
 <ul>
 <li><p>打开主要CSS文件 <code>main.styl</code> ，引入<code>_other.styl</code> CSS样式文件，添加如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;个人添加</span><br><span class="line">@import &quot;_other.styl&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="/post/0/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211558095.png" alt="image-20210214211558095"></p>
+<p><img src="/post/b24ce228/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211558095.png" alt="image-20210214211558095"></p>
 </li>
 <li><p>插入博客背景的CSS样式到<code>_other.styl</code> </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;背景图片</span><br><span class="line">body &#123;</span><br><span class="line">    background:url(&#x2F;images&#x2F;background.png);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -158,11 +158,11 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css</span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br><span class="line">    - &#39;**&#x2F;fireworks.js&#39;</span><br></pre></td></tr></table></figure>
 <h2 id="3-34首页顶部留白"><a href="#3-34首页顶部留白" class="headerlink" title="3.34首页顶部留白"></a>3.34首页顶部留白</h2><p>顶部留白个人感觉更好看，同样找到<code>_other.styl</code>（之前自己加的，可以看此篇文章开头）</p>
 <p>效果：</p>
-<p><img src="/post/0/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211010556.png" alt="image-20210214211010556"></p>
+<p><img src="/post/b24ce228/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211010556.png" alt="image-20210214211010556"></p>
 <p>加上如下代码：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//首页顶部留白</span></span><br><span class="line">.container&#123;margin-top:10px;&#125; </span><br></pre></td></tr></table></figure>
 <h2 id="3-35首页banner渐变色"><a href="#3-35首页banner渐变色" class="headerlink" title="3.35首页banner渐变色"></a>3.35首页banner渐变色</h2><p>效果：</p>
-<p><img src="/post/0/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211024652.png" alt="image-20210214211024652"></p>
+<p><img src="/post/b24ce228/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211024652.png" alt="image-20210214211024652"></p>
 <p>修改<code>_other.styl</code></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//首页banner渐变色</span></span><br><span class="line">.site-brand-container &#123;</span><br><span class="line">    background: linear-gradient(200deg, #2e80a5, #0c0c0b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>颜色可以自己选</p>
@@ -180,7 +180,7 @@
   </entry>
   <entry>
     <title>用hexo+github pages+独立域名搭建个人博客</title>
-    <url>/post/0/</url>
+    <url>/post/5aeb5456/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>基本环境</p>
 <ul>
 <li><p>Window10</p>
@@ -287,7 +287,7 @@
   </entry>
   <entry>
     <title>github创建个人访问令牌</title>
-    <url>/post/0/</url>
+    <url>/post/74d482c9/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="GitHub-创建个人访问令牌"><a href="#GitHub-创建个人访问令牌" class="headerlink" title="GitHub 创建个人访问令牌"></a>GitHub 创建个人访问令牌</h1><p>2020-08-31 16:39 更新</p>
 <p>您应该通过命令行或 API 创建个人访问令牌来代替密码。</p>
 <p>在使用<a href="https://docs.github.com/cn/v3/auth/#via-oauth-and-personal-access-tokens">GitHub API</a>或命令行时，可使用个人访问令牌 (PAT) 代替密码向 GitHub 进行身份验证。</p>
@@ -352,8 +352,8 @@
       </tags>
   </entry>
   <entry>
-    <title>看板娘设置（2)</title>
-    <url>/post/0/</url>
+    <title>看板娘设置(2)</title>
+    <url>/post/cf4ab21c/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="看板娘安装教程"><a href="#看板娘安装教程" class="headerlink" title="看板娘安装教程"></a>看板娘安装教程</h3><p>1、把大神已修改好的代码托管在Github <a href="https://github.com/stevenjoezhang/live2d-widget">源码</a>  下载到hexo目录下的<code>/themes/icarus/source</code>下,                  下载好的文件名<code>live2d-widget</code> </p>
 <p>2、进入<code>live2d-widget</code> 修改`autoload.js’</p>
 <a id="more"></a>
@@ -378,7 +378,7 @@
   </entry>
   <entry>
     <title>hexo+next+看板娘设置（1)</title>
-    <url>/post/0/</url>
+    <url>/post/d1da4e15/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="1-Fork看板娘项目到自己的Github"><a href="#1-Fork看板娘项目到自己的Github" class="headerlink" title="1. Fork看板娘项目到自己的Github"></a>1. Fork看板娘项目到自己的Github</h1><p>Hexo博客本身是支持看板娘的，但是原本的只有一个人物，一点也不好玩，stevenjoezhang大佬写了一个可以说话，可以换装的看板娘项目并开源，使用起来也是非常的方便。</p>
 <a id="more"></a>
 
@@ -441,7 +441,7 @@
   </entry>
   <entry>
     <title>java环境配置</title>
-    <url>/post/61528/</url>
+    <url>/post/e06ceb34/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="1-JDK的下载"><a href="#1-JDK的下载" class="headerlink" title="1.JDK的下载"></a><strong>1.JDK的下载</strong></h1><p>在Oracle官网可以下载JDK（Java Development Kit）中文叫java工具集，因为官网的资料是一手的所以建议大家从官网获取软件包。从其他地方获取的并非不可靠，但是免费的开源软件包建议大家都从对应的官方网站进行下载。<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">点击链接</a>跳转到对应的页面。选择对应的系统进行下载， </p>
 <a id="more"></a>
 
@@ -482,7 +482,7 @@
   </entry>
   <entry>
     <title>java环境配置</title>
-    <url>/post/0/</url>
+    <url>/post/e06ceb34/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>安装nodejs方式有很多种。</p>
 <a id="more"></a>
 
@@ -540,7 +540,7 @@
   </entry>
   <entry>
     <title>kali开启root</title>
-    <url>/post/0/</url>
+    <url>/post/62638679/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>出于对渗透系统的安全考虑，Kali　Linux中默认无root用户权限，下面小编将给确实需要使用的用户带来Kali-2020开始root权限教程。</p>
 <a id="more"></a>
 

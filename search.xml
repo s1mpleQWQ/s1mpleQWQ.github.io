@@ -20,25 +20,25 @@
 
 
 <p>效果如下：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A81.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A81.jpg" alt="img"></a></p>
+<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\001.jpg" alt="001"></p>
 <p>播放列表模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    listFolded: false,&#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90,&#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;此为歌词格式，没有歌词可以直接删掉这一行</span><br><span class="line">    audio: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;,</span><br><span class="line">            artist: &#39;artist1&#39;,</span><br><span class="line">            url: &#39;url1.mp3&#39;,</span><br><span class="line">            cover: &#39;cover1.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;,</span><br><span class="line">            theme: &#39;#ebd0c2&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;,</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A82.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A82.jpg" alt="img"></a></p>
+<p>[<img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\002.jpg" alt="img">]</p>
 <p>吸底模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    fixed: true,</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A83.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A83.jpg" alt="img"></a></p>
+<p>[<img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\003.jpg" alt="img">]</p>
 <p>迷你模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    mini: true,</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A84.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A84.jpg" alt="img"></a></p>
+<p>[<img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\004.jpg" alt="img">]</p>
 <h5 id="其他参数修改"><a href="#其他参数修改" class="headerlink" title="其他参数修改"></a>其他参数修改</h5><p>其他参数解释都能在官方文档里面查看，我再赘述一遍吧。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;), &#x2F;&#x2F;播放器容器元素</span><br><span class="line">    mini: false, &#x2F;&#x2F;迷你模式</span><br><span class="line">    autoplay: false, &#x2F;&#x2F;自动播放</span><br><span class="line">    theme: &#39;#FADFA3&#39;, &#x2F;&#x2F;主题色</span><br><span class="line">    loop: &#39;all&#39;, &#x2F;&#x2F;音频循环播放, 可选值: &#39;all&#39;全部循环, &#39;one&#39;单曲循环, &#39;none&#39;不循环</span><br><span class="line">    order: &#39;random&#39;, &#x2F;&#x2F;音频循环顺序, 可选值: &#39;list&#39;列表循环, &#39;random&#39;随机循环</span><br><span class="line">    preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;</span><br><span class="line">    volume: 0.7, &#x2F;&#x2F;默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">    mutex: true, &#x2F;&#x2F;互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器</span><br><span class="line">    listFolded: false, &#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90, &#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;歌词传递方式</span><br><span class="line">    audio: [ &#x2F;&#x2F;音频信息,包含以下</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;, &#x2F;&#x2F;音频名称</span><br><span class="line">            artist: &#39;artist1&#39;, &#x2F;&#x2F;音频艺术家</span><br><span class="line">            url: &#39;url1.mp3&#39;, &#x2F;&#x2F;音频外链</span><br><span class="line">            cover: &#39;cover1.jpg&#39;, &#x2F;&#x2F;音频封面</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;, &#x2F;&#x2F;音频歌词，配合上面的lrcType使用</span><br><span class="line">            theme: &#39;#ebd0c2&#39; &#x2F;&#x2F;切换到此音频时的主题色，比上面的 theme 优先级高</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;, &#x2F;&#x2F;如果只有一首歌，删掉这一块，如有更多歌曲按此格式逐渐往下添加</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>更多有趣的功能自己去发掘吧。</p>
@@ -50,14 +50,14 @@
 
 <p>将放置代码放在不同的<code>~/hexo/themes/next/layout/***.swig</code>文件内会有不同的效果。</p>
 <p>例1：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A85.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A85.jpg" alt="img"></a></p>
+<p>[<img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\005.jpg" alt="img">]</p>
 <p>例2：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A86.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A86.jpg" alt="img"></a></p>
+<p>[<img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A86.jpg" alt="img">]</p>
 <p>例3：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A87.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A87.jpg" alt="img"></a></p>
+<p>[<img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\007.jpg" alt="img">]</p>
 <p>每个人使用的主题不一样，要根据自己的主题去调试。例如我用的是next-mist主题，且喜欢放置在侧边栏。那么在<code>~/hexo/themes/next/layout/_marco</code>文件夹下找到<code>sidebar.swig</code>文件。</p>
 <p>如果要放置在侧边栏的<code>友链</code>下面,那么在<code>sidebar.swig</code>中找到<code>if theme.links</code>，将放置代码添加到<code>endif</code>之后。如下图：</p>
-<p><a href="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A88.jpg"><img src="https://image-1253170309.cos.ap-guangzhou.myqcloud.com/image/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A88.jpg" alt="img"></a></p>
+<p>[<img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\文章图片\008.jpg" alt="img">]</p>
 <p>如要放置到<code>RSS</code>下就在<code>sidebar.swig</code>中搜索<code>if theme.rss</code>，也是添加到<code>endif</code>之后。</p>
 <p>想放在其他更多的位置上就自己去尝试吧。</p>
 <p>　</p>

@@ -26,6 +26,25 @@ const ap = new APlayer({
         artist: '青山テルマ',
         url: 'http://music.163.com/song/media/outer/url?id=555142.mp3',
         cover: 'http://p1.music.126.net/NbCDQFwkLCYJbWMJdTfoMA==/109951165611108178.jpg?param=130y130',
+      },
+      {
+        name: '夏天的风',
+        artist: '火羊瞌睡了',
+        url: 'http://music.163.com/song/media/outer/url?id=1436709403.mp3',
+        cover: 'http://p1.music.126.net/rFUKVdOjqxgwAT6Zi6qv7A==/109951164906689206.jpg?param=130y130',
+      },
+       {
+        name: '可乐',
+        artist: '赵紫骅',
+        url: 'http://music.163.com/song/media/outer/url?id=29759733.mp3',
+        cover: 'https://p1.music.126.net/qOfVT6izV4mBe4IyQn489Q==/18190320370401891.jpg?param=130y130',
+      },
+       {
+        name: '你要的全拿走',
+        artist: '胡彦斌',
+        url: 'http://music.163.com/song/media/outer/url?id=529668356.mp3',
+        cover: 'https://p1.music.126.net/9uUWLnRsv4c0F0wu9dlttA==/109951163118372627.jpg?param=130y130',
       }
+     
     ]
 });

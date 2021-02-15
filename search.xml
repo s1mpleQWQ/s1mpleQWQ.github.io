@@ -697,7 +697,7 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo+next 7.8美化</title>
+    <title>hexo+next 7.8美化(2)</title>
     <url>/post/1a33eb6e/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="插入音乐"><a href="#插入音乐" class="headerlink" title="插入音乐"></a>插入音乐</h1><hr>
 <h2 id="使用html插入"><a href="#使用html插入" class="headerlink" title="使用html插入"></a>使用html插入</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;audio src&#x3D;&quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;你的网易云歌曲ID.mp3&quot; style&#x3D;&quot;max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;&quot; controls&#x3D;&quot;controls&quot; loop&#x3D;&quot;loop&quot; preload&#x3D;&quot;meta&quot;&gt;Your browser does not support the audio tag.&lt;&#x2F;audio&gt;</span><br></pre></td></tr></table></figure>
@@ -1274,6 +1274,21 @@
 </ol>
 <p>注意neat 的使用可能会导致一些我们添加的效果失效。如鼠标点击爆炸效果。我们需要将配置中的 JS选项的</p>
 <p><code>enable:</code>的值该为<code>false</code>即可。</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>修复Hexo Next 主题中文目录点击失效</title>
+    <url>/post/dd8ad78c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-7e53b0b40f42f846e47830a093c4512c_b.png" alt="img"></p>
+<h1 id="修复方法"><a href="#修复方法" class="headerlink" title="修复方法"></a>修复方法</h1><p>在 Hexo 更新至 5.x 版本，Next 更新至 7.x 版本后，会出现文章的中文目录点击跳转失效的 bug。</p>
+<p>目前官方已经给出解决方法。如图，在 themes/next/source/js/util.js 中增加两行代码，删除两行代码。保存，hexo clean &amp; hexo g &amp; hexo s 即可解决。（如果还是不行就删除浏览器缓存重试）</p>
+<p><img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-ec91a773f9377ce1a93f8da896ec6d80_720w.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>

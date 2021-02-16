@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/post/4a17b156/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo+next+看板娘设置（1)</title>
+    <url>/post/d1da4e15/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="1-Fork看板娘项目到自己的Github"><a href="#1-Fork看板娘项目到自己的Github" class="headerlink" title="1. Fork看板娘项目到自己的Github"></a>1. Fork看板娘项目到自己的Github</h1><p>Hexo博客本身是支持看板娘的，但是原本的只有一个人物，一点也不好玩，stevenjoezhang大佬写了一个可以说话，可以换装的看板娘项目并开源，使用起来也是非常的方便。</p>
+<a id="more"></a>
+
+<p>首先访问 <a href="https://github.com/stevenjoezhang/live2d-widget">live2d-widget</a> 的 Github 仓库，点击右上角 <code>Fork</code> 该项目到自己的仓库：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L2JpMlB4eThoRldqUy5wbmc" alt="mark"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L3RTTVZJb0p2b3ZVaC5wbmc" alt="mark"></p>
+<h1 id="2-向-Next-中添加看板娘"><a href="#2-向-Next-中添加看板娘" class="headerlink" title="2. 向 Next 中添加看板娘"></a>2. 向 Next 中添加看板娘</h1><p>修改 <code>/themes/hexo-theme-next/layout/_layout.swing</code> 文件，在最后添加下面这行代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Mculover666/live2d-widget/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：请将CDN链接中的 <code>Mculover666</code> 换成你的用户名！</p>
+</blockquote>
+<h1 id="3-使能看板娘"><a href="#3-使能看板娘" class="headerlink" title="3. 使能看板娘"></a>3. 使能看板娘</h1><p>编辑<strong>主题配置文件</strong> <code>/themes/hexo-theme-next/_config.yml</code>，添加如下内容：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 自定义看板娘</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
+<p>这个时候重新生成并部署博客，就可以看到博客左下角出现一个看板娘了哈哈。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L21TUXFLdXNhRkFkci5naWY#pic_center" alt="mark"></p>
+<p><strong>这个看板娘是默认的，在左下角，如果想要修改它的位置，大小，说话内容，该如何办呢？</strong></p>
+<h1 id="4-定制一个属于你自己的看板娘"><a href="#4-定制一个属于你自己的看板娘" class="headerlink" title="4. 定制一个属于你自己的看板娘"></a>4. 定制一个属于你自己的看板娘</h1><p>第 1 步中我们fork了看板娘项目到自己的 Github 中，然后使用CDN方式部署到了Hexo博客中，接下来讲述如何进行修改，定制一个属于你自己的看板娘~</p>
+<h2 id="clone-你的项目到本地"><a href="#clone-你的项目到本地" class="headerlink" title="clone 你的项目到本地"></a>clone 你的项目到本地</h2><p>将项目 clone 到本地：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Mculover666/live2d-widget.git</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意是 clone 你自己的 Github 中的看板娘项目!</p>
+</blockquote>
+<h2 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h2><p>首先说明一下看板娘项目中几个文件的作用：</p>
+<ul>
+<li><code>autoload.js</code>：自动加载看板娘；</li>
+<li><code>waifu.css</code>：看板娘样式；</li>
+<li><code>waifu-tips.js</code>：看板娘说话的脚本；</li>
+<li><code>waifu-tips.json</code>：看板娘说话的内容；</li>
+</ul>
+<h3 id="修改加载看板娘的路径（必须）"><a href="#修改加载看板娘的路径（必须）" class="headerlink" title="修改加载看板娘的路径（必须）"></a>修改加载看板娘的路径（必须）</h3><p>在 <code>autoload.js</code> 的开头定义了加载看板娘的路径，注意这里需要使用绝对路径：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;注意：live2d_path参数应使用绝对路径</span><br><span class="line">const live2d_path &#x3D; &quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;Mculover666&#x2F;live2d-widget&#x2F;&quot;;</span><br><span class="line">&#x2F;&#x2F;const live2d_path &#x3D; &quot;&#x2F;live2d-widget&#x2F;&quot;;</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：将CDN路径中的 <code>Mculover666</code> 改为你自己的Github用户名。</p>
+</blockquote>
+<h3 id="修改看板娘布局和样式"><a href="#修改看板娘布局和样式" class="headerlink" title="修改看板娘布局和样式"></a>修改看板娘布局和样式</h3><p>在 <code>waifu.css</code> 中修改：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L1dpOU1udlhibTlTWS5wbmc#pic_center" alt="mark"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L0t2Rm1wazVyc3pIaS5wbmc#pic_center" alt="mark"></p>
+<p>更多的修改可以自行修改哦~</p>
+<h3 id="暂存提交推送三连"><a href="#暂存提交推送三连" class="headerlink" title="暂存提交推送三连"></a>暂存提交推送三连</h3><p>修改完成后，将修改暂存，然后提交，最后<strong>一定要推送到远程库</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;modify position to right&quot;</span></span><br><span class="line">git push origin master</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
+<h3 id="发布新版本"><a href="#发布新版本" class="headerlink" title="发布新版本"></a>发布新版本</h3><p>我们是使用了Github免费的CDN服务，所以还需要发布一个新的版本：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L09wMlFtVUxMQVdKNi5wbmc" alt="mark"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L1NzbkJlZnNpZzNQYS5wbmc" alt="mark"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L2t2TXNBY1Y5d2M5MC5wbmc" alt="mark"></p>
+<h3 id="修改CDN链接"><a href="#修改CDN链接" class="headerlink" title="修改CDN链接"></a>修改CDN链接</h3><p>Github上CDN的使用方式为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<p>所以在博客中的<code>/themes/hexo-theme-next/layout/_layout.swing</code>文件中修改CDN链接使用最新的版本：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Mculover666/live2d-widget@1.0.0/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h3 id="重新生成部署博客"><a href="#重新生成部署博客" class="headerlink" title="重新生成部署博客"></a>重新生成部署博客</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<p>来看看效果哈哈哈，看板娘已经成功的跑到了右边：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L3RZUXlNcGhCeTUxei5wbmc" alt="mark"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>看板娘</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>github创建个人访问令牌</title>
     <url>/post/74d482c9/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="GitHub-创建个人访问令牌"><a href="#GitHub-创建个人访问令牌" class="headerlink" title="GitHub 创建个人访问令牌"></a>GitHub 创建个人访问令牌</h1><p>2020-08-31 16:39 更新</p>
@@ -131,85 +210,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo+next+看板娘设置（1)</title>
-    <url>/post/d1da4e15/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="1-Fork看板娘项目到自己的Github"><a href="#1-Fork看板娘项目到自己的Github" class="headerlink" title="1. Fork看板娘项目到自己的Github"></a>1. Fork看板娘项目到自己的Github</h1><p>Hexo博客本身是支持看板娘的，但是原本的只有一个人物，一点也不好玩，stevenjoezhang大佬写了一个可以说话，可以换装的看板娘项目并开源，使用起来也是非常的方便。</p>
-<a id="more"></a>
-
-<p>首先访问 <a href="https://github.com/stevenjoezhang/live2d-widget">live2d-widget</a> 的 Github 仓库，点击右上角 <code>Fork</code> 该项目到自己的仓库：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L2JpMlB4eThoRldqUy5wbmc" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L3RTTVZJb0p2b3ZVaC5wbmc" alt="mark"></p>
-<h1 id="2-向-Next-中添加看板娘"><a href="#2-向-Next-中添加看板娘" class="headerlink" title="2. 向 Next 中添加看板娘"></a>2. 向 Next 中添加看板娘</h1><p>修改 <code>/themes/hexo-theme-next/layout/_layout.swing</code> 文件，在最后添加下面这行代码：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Mculover666/live2d-widget/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：请将CDN链接中的 <code>Mculover666</code> 换成你的用户名！</p>
-</blockquote>
-<h1 id="3-使能看板娘"><a href="#3-使能看板娘" class="headerlink" title="3. 使能看板娘"></a>3. 使能看板娘</h1><p>编辑<strong>主题配置文件</strong> <code>/themes/hexo-theme-next/_config.yml</code>，添加如下内容：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 自定义看板娘</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
-<p>这个时候重新生成并部署博客，就可以看到博客左下角出现一个看板娘了哈哈。</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L21TUXFLdXNhRkFkci5naWY#pic_center" alt="mark"></p>
-<p><strong>这个看板娘是默认的，在左下角，如果想要修改它的位置，大小，说话内容，该如何办呢？</strong></p>
-<h1 id="4-定制一个属于你自己的看板娘"><a href="#4-定制一个属于你自己的看板娘" class="headerlink" title="4. 定制一个属于你自己的看板娘"></a>4. 定制一个属于你自己的看板娘</h1><p>第 1 步中我们fork了看板娘项目到自己的 Github 中，然后使用CDN方式部署到了Hexo博客中，接下来讲述如何进行修改，定制一个属于你自己的看板娘~</p>
-<h2 id="clone-你的项目到本地"><a href="#clone-你的项目到本地" class="headerlink" title="clone 你的项目到本地"></a>clone 你的项目到本地</h2><p>将项目 clone 到本地：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Mculover666/live2d-widget.git</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意是 clone 你自己的 Github 中的看板娘项目!</p>
-</blockquote>
-<h2 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h2><p>首先说明一下看板娘项目中几个文件的作用：</p>
-<ul>
-<li><code>autoload.js</code>：自动加载看板娘；</li>
-<li><code>waifu.css</code>：看板娘样式；</li>
-<li><code>waifu-tips.js</code>：看板娘说话的脚本；</li>
-<li><code>waifu-tips.json</code>：看板娘说话的内容；</li>
-</ul>
-<h3 id="修改加载看板娘的路径（必须）"><a href="#修改加载看板娘的路径（必须）" class="headerlink" title="修改加载看板娘的路径（必须）"></a>修改加载看板娘的路径（必须）</h3><p>在 <code>autoload.js</code> 的开头定义了加载看板娘的路径，注意这里需要使用绝对路径：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;注意：live2d_path参数应使用绝对路径</span><br><span class="line">const live2d_path &#x3D; &quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;Mculover666&#x2F;live2d-widget&#x2F;&quot;;</span><br><span class="line">&#x2F;&#x2F;const live2d_path &#x3D; &quot;&#x2F;live2d-widget&#x2F;&quot;;</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：将CDN路径中的 <code>Mculover666</code> 改为你自己的Github用户名。</p>
-</blockquote>
-<h3 id="修改看板娘布局和样式"><a href="#修改看板娘布局和样式" class="headerlink" title="修改看板娘布局和样式"></a>修改看板娘布局和样式</h3><p>在 <code>waifu.css</code> 中修改：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L1dpOU1udlhibTlTWS5wbmc#pic_center" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L0t2Rm1wazVyc3pIaS5wbmc#pic_center" alt="mark"></p>
-<p>更多的修改可以自行修改哦~</p>
-<h3 id="暂存提交推送三连"><a href="#暂存提交推送三连" class="headerlink" title="暂存提交推送三连"></a>暂存提交推送三连</h3><p>修改完成后，将修改暂存，然后提交，最后<strong>一定要推送到远程库</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;modify position to right&quot;</span></span><br><span class="line">git push origin master</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
-<h3 id="发布新版本"><a href="#发布新版本" class="headerlink" title="发布新版本"></a>发布新版本</h3><p>我们是使用了Github免费的CDN服务，所以还需要发布一个新的版本：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L09wMlFtVUxMQVdKNi5wbmc" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L1NzbkJlZnNpZzNQYS5wbmc" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L2t2TXNBY1Y5d2M5MC5wbmc" alt="mark"></p>
-<h3 id="修改CDN链接"><a href="#修改CDN链接" class="headerlink" title="修改CDN链接"></a>修改CDN链接</h3><p>Github上CDN的使用方式为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-<p>所以在博客中的<code>/themes/hexo-theme-next/layout/_layout.swing</code>文件中修改CDN链接使用最新的版本：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Mculover666/live2d-widget@1.0.0/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-<h3 id="重新生成部署博客"><a href="#重新生成部署博客" class="headerlink" title="重新生成部署博客"></a>重新生成部署博客</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
-<p>来看看效果哈哈哈，看板娘已经成功的跑到了右边：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L3RZUXlNcGhCeTUxei5wbmc" alt="mark"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>next</tag>
-        <tag>看板娘</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/post/4a17b156/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>java环境配置</title>
     <url>/post/e06ceb34/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="1-JDK的下载"><a href="#1-JDK的下载" class="headerlink" title="1.JDK的下载"></a><strong>1.JDK的下载</strong></h1><p>在Oracle官网可以下载JDK（Java Development Kit）中文叫java工具集，因为官网的资料是一手的所以建议大家从官网获取软件包。从其他地方获取的并非不可靠，但是免费的开源软件包建议大家都从对应的官方网站进行下载。<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">点击链接</a>跳转到对应的页面。选择对应的系统进行下载， </p>
@@ -255,24 +255,6 @@
       <tags>
         <tag>java</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>kali开启root</title>
-    <url>/post/62638679/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>出于对渗透系统的安全考虑，Kali　Linux中默认无root用户权限，下面小编将给确实需要使用的用户带来Kali-2020开始root权限教程。</p>
-<a id="more"></a>
-
-<p>1、Vmware中启动系统,当出现如下图启动界面时按“E”键，注意要快，如果没赶上则重新启动客户机，重复上述操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716205214199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>2、操作1成功后进入如（图1）界面，将光标下移至linux，如（图2），将ro修改为rw，在splash后添加 /init=/bin/bash，注意splash和init之间要加空格。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716205423188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img">   <img src="https://img-blog.csdnimg.cn/20200716205933998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>​                （图1）                                            （图2）</p>
-<p>修改后的界面如（图3）所示： </p>
-<p><img src="https://img-blog.csdnimg.cn/20200716210138655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>3、按F10保存，进入单用户模式，在root@（none）：/# 输入passwd，后面在New password：后设置root用户的密码，Retype new password:后重复输入密码确认。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716210440801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
-<p>4、完成上述操作后重启客户机即可。</p>
-]]></content>
   </entry>
   <entry>
     <title>next 鼠标点击特效</title>
@@ -364,43 +346,21 @@
       </tags>
   </entry>
   <entry>
-    <title>修复Hexo Next 主题中文目录点击失效</title>
-    <url>/post/dd8ad78c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-7e53b0b40f42f846e47830a093c4512c_b.png" alt="img"></p>
+    <title>kali开启root</title>
+    <url>/post/62638679/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>出于对渗透系统的安全考虑，Kali　Linux中默认无root用户权限，下面小编将给确实需要使用的用户带来Kali-2020开始root权限教程。</p>
 <a id="more"></a>
 
-<h1 id="修复方法"><a href="#修复方法" class="headerlink" title="修复方法"></a>修复方法</h1><p>在 Hexo 更新至 5.x 版本，Next 更新至 7.x 版本后，会出现文章的中文目录点击跳转失效的 bug。</p>
-<p>目前官方已经给出解决方法。如图，在 themes/next/source/js/util.js 中增加两行代码，删除两行代码。保存，hexo clean &amp; hexo g &amp; hexo s 即可解决。（如果还是不行就删除浏览器缓存重试）</p>
-<p><img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-ec91a773f9377ce1a93f8da896ec6d80_720w.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/post/9daba997/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>你好呀啦啦啦啦</p>
-<a id="more"></a>
-
-<h1 id="你好吗"><a href="#你好吗" class="headerlink" title="你好吗"></a>你好吗</h1><p>还行吧</p>
-<h2 id="我是尼"><a href="#我是尼" class="headerlink" title="我是尼"></a>我是尼</h2><p>草草草哦</p>
-<p>dwadwwadaw</p>
-<p>wda</p>
-<p>wdaw</p>
-<p>awd</p>
-<p>awd</p>
-<h2 id="我你可"><a href="#我你可" class="headerlink" title="我你可"></a>我你可</h2><p>ni</p>
-<p>dssss</p>
-<p>s</p>
-<p>s</p>
-<p>ss</p>
-<p>ssssss</p>
-<p>sss</p>
-<p>ss</p>
+<p>1、Vmware中启动系统,当出现如下图启动界面时按“E”键，注意要快，如果没赶上则重新启动客户机，重复上述操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716205214199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>2、操作1成功后进入如（图1）界面，将光标下移至linux，如（图2），将ro修改为rw，在splash后添加 /init=/bin/bash，注意splash和init之间要加空格。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716205423188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img">   <img src="https://img-blog.csdnimg.cn/20200716205933998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>​                （图1）                                            （图2）</p>
+<p>修改后的界面如（图3）所示： </p>
+<p><img src="https://img-blog.csdnimg.cn/20200716210138655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>3、按F10保存，进入单用户模式，在root@（none）：/# 输入passwd，后面在New password：后设置root用户的密码，Retype new password:后重复输入密码确认。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200716210440801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>4、完成上述操作后重启客户机即可。</p>
 ]]></content>
   </entry>
   <entry>
@@ -509,6 +469,46 @@
         <tag>hexo</tag>
         <tag>github</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>修复Hexo Next 主题中文目录点击失效</title>
+    <url>/post/dd8ad78c/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-7e53b0b40f42f846e47830a093c4512c_b.png" alt="img"></p>
+<a id="more"></a>
+
+<h1 id="修复方法"><a href="#修复方法" class="headerlink" title="修复方法"></a>修复方法</h1><p>在 Hexo 更新至 5.x 版本，Next 更新至 7.x 版本后，会出现文章的中文目录点击跳转失效的 bug。</p>
+<p>目前官方已经给出解决方法。如图，在 themes/next/source/js/util.js 中增加两行代码，删除两行代码。保存，hexo clean &amp; hexo g &amp; hexo s 即可解决。（如果还是不行就删除浏览器缓存重试）</p>
+<p><img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-ec91a773f9377ce1a93f8da896ec6d80_720w.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/post/9daba997/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>你好呀啦啦啦啦</p>
+<a id="more"></a>
+
+<h1 id="你好吗"><a href="#你好吗" class="headerlink" title="你好吗"></a>你好吗</h1><p>还行吧</p>
+<h2 id="我是尼"><a href="#我是尼" class="headerlink" title="我是尼"></a>我是尼</h2><p>草草草哦</p>
+<p>dwadwwadaw</p>
+<p>wda</p>
+<p>wdaw</p>
+<p>awd</p>
+<p>awd</p>
+<h2 id="我你可"><a href="#我你可" class="headerlink" title="我你可"></a>我你可</h2><p>ni</p>
+<p>dssss</p>
+<p>s</p>
+<p>s</p>
+<p>ss</p>
+<p>ssssss</p>
+<p>sss</p>
+<p>ss</p>
+]]></content>
   </entry>
   <entry>
     <title>看板娘设置(2)</title>

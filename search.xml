@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试</title>
+    <url>/post/9daba997/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>123567</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo+next+gulp</title>
     <url>/post/b33de7b7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="1、全局安装gulp"><a href="#1、全局安装gulp" class="headerlink" title="1、全局安装gulp"></a>1、全局安装gulp</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install gulp -g</span><br><span class="line"><span class="comment"># 查看版本</span></span><br><span class="line">gulp -v</span><br></pre></td></tr></table></figure>

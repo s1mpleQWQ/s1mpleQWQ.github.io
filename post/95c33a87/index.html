@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/cs.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"s1mpleqaq.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="在\themes\next\layout_layout.swig文件里内部引用： 123456789101112131415 &lt;!-- 页面点击小红心 --&gt;&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.mini.js&quot;&gt;&lt;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="next 鼠标点击特效">
+<meta property="og:url" content="http://s1mpleqaq.cn/post/95c33a87/index.html">
+<meta property="og:site_name" content="白菜想要学习">
+<meta property="og:description" content="在\themes\next\layout_layout.swig文件里内部引用： 123456789101112131415 &lt;!-- 页面点击小红心 --&gt;&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.mini.js&quot;&gt;&lt;&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-14T13:59:16.937Z">
+<meta property="article:modified_time" content="2021-02-14T14:34:39.688Z">
+<meta property="article:author" content="白菜">
+<meta property="article:tag" content="next">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://s1mpleqaq.cn/post/95c33a87/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>next 鼠标点击特效 | 白菜想要学习</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+ <script src="/live2d-widget/autoload.js"></script>
+
+
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">白菜想要学习</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">爱打游戏的码农</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-playlist">
+
+    <a href="/playlist/" rel="section"><i class="fa fa-fw fa-music"></i>歌单</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://s1mpleqaq.cn/post/95c33a87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="白菜">
+      <meta itemprop="description" content="可能你不快乐，可我要你快乐">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白菜想要学习">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          next 鼠标点击特效
+        </h1>
+
+        <div class="post-meta">
+
+        	
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-14 21:59:16 / 修改时间：22:34:39" itemprop="dateCreated datePublished" datetime="2021-02-14T21:59:16+08:00">2021-02-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>27 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>在<code>\themes\next\layout_layout.swig</code>文件里内部引用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.cursor_effect %&#125;</span><br><span class="line">  &#123;% if theme.cursor_effect.type &#x3D;&#x3D; &quot;fireworks&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;explosion&quot; %&#125;</span><br><span class="line">    &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;explosion.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;love&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;love.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;text&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<p>在主题 <code>next.yml</code>l中添加动态配置项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.cursor_effect %&#125;</span><br><span class="line">  &#123;% if theme.cursor_effect.type &#x3D;&#x3D; &quot;fireworks&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;explosion&quot; %&#125;</span><br><span class="line">    &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;explosion.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;love&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;love.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;text&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>将以下4个 JS 文件复制到目录   <code>/themes/next/source/js/cursor/</code> 下</p>
+<p>fireworks.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line">class Circle &#123;</span><br><span class="line">  constructor(&#123; origin, speed, color, angle, context &#125;) &#123;</span><br><span class="line">    this.origin = origin</span><br><span class="line">    this.position = &#123; ...this.origin &#125;</span><br><span class="line">    this.color = color</span><br><span class="line">    this.speed = speed</span><br><span class="line">    this.angle = angle</span><br><span class="line">    this.context = context</span><br><span class="line">    this.renderCount = 0</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">draw</span></span>() &#123;</span><br><span class="line">    this.context.fillStyle = this.color</span><br><span class="line">    this.context.beginPath()</span><br><span class="line">    this.context.arc(this.position.x, this.position.y, 2, 0, Math.PI * 2)</span><br><span class="line">    this.context.fill()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">move</span></span>() &#123;</span><br><span class="line">    this.position.x = (Math.sin(this.angle) * this.speed) + this.position.x</span><br><span class="line">    this.position.y = (Math.cos(this.angle) * this.speed) + this.position.y + (this.renderCount * 0.3)</span><br><span class="line">    this.renderCount++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Boom &#123;</span><br><span class="line">  constructor (&#123; origin, context, circleCount = 16, area &#125;) &#123;</span><br><span class="line">    this.origin = origin</span><br><span class="line">    this.context = context</span><br><span class="line">    this.circleCount = circleCount</span><br><span class="line">    this.area = area</span><br><span class="line">    this.stop = <span class="literal">false</span></span><br><span class="line">    this.circles = []</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomArray(range) &#123;</span><br><span class="line">    const length = range.length</span><br><span class="line">    const randomIndex = Math.floor(length * Math.random())</span><br><span class="line">    <span class="built_in">return</span> range[randomIndex]</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">randomColor</span></span>() &#123;</span><br><span class="line">    const range = [<span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;9&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>]</span><br><span class="line">    <span class="built_in">return</span> <span class="string">&#x27;#&#x27;</span> + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range) + this.randomArray(range)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  randomRange(start, end) &#123;</span><br><span class="line">    <span class="built_in">return</span> (end - start) * Math.random() + start</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">init</span></span>() &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">let</span> i = 0; i &lt; this.circleCount; i++) &#123;</span><br><span class="line">      const circle = new Circle(&#123;</span><br><span class="line">        context: this.context,</span><br><span class="line">        origin: this.origin,</span><br><span class="line">        color: this.randomColor(),</span><br><span class="line">        angle: this.randomRange(Math.PI - 1, Math.PI + 1),</span><br><span class="line">        speed: this.randomRange(1, 6)</span><br><span class="line">      &#125;)</span><br><span class="line">      this.circles.push(circle)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">move</span></span>() &#123;</span><br><span class="line">    this.circles.forEach((circle, index) =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (circle.position.x &gt; this.area.width || circle.position.y &gt; this.area.height) &#123;</span><br><span class="line">        <span class="built_in">return</span> this.circles.splice(index, 1)</span><br><span class="line">      &#125;</span><br><span class="line">      circle.move()</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">if</span> (this.circles.length == 0) &#123;</span><br><span class="line">      this.stop = <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">draw</span></span>() &#123;</span><br><span class="line">    this.circles.forEach(circle =&gt; circle.draw())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class CursorSpecialEffects &#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span></span>() &#123;</span><br><span class="line">    this.computerCanvas = document.createElement(<span class="string">&#x27;canvas&#x27;</span>)</span><br><span class="line">    this.renderCanvas = document.createElement(<span class="string">&#x27;canvas&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    this.computerContext = this.computerCanvas.getContext(<span class="string">&#x27;2d&#x27;</span>)</span><br><span class="line">    this.renderContext = this.renderCanvas.getContext(<span class="string">&#x27;2d&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    this.globalWidth = window.innerWidth</span><br><span class="line">    this.globalHeight = window.innerHeight</span><br><span class="line"></span><br><span class="line">    this.booms = []</span><br><span class="line">    this.running = <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  handleMouseDown(e) &#123;</span><br><span class="line">    const boom = new Boom(&#123;</span><br><span class="line">      origin: &#123; x: e.clientX, y: e.clientY &#125;,</span><br><span class="line">      context: this.computerContext,</span><br><span class="line">      area: &#123;</span><br><span class="line">        width: this.globalWidth,</span><br><span class="line">        height: this.globalHeight</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    boom.init()</span><br><span class="line">    this.booms.push(boom)</span><br><span class="line">    this.running || this.run()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">handlePageHide</span></span>() &#123;</span><br><span class="line">    this.booms = []</span><br><span class="line">    this.running = <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">init</span></span>() &#123;</span><br><span class="line">    const style = this.renderCanvas.style</span><br><span class="line">    style.position = <span class="string">&#x27;fixed&#x27;</span></span><br><span class="line">    style.top = style.left = 0</span><br><span class="line">    style.zIndex = <span class="string">&#x27;999999999999999999999999999999999999999999&#x27;</span></span><br><span class="line">    style.pointerEvents = <span class="string">&#x27;none&#x27;</span></span><br><span class="line"></span><br><span class="line">    style.width = this.renderCanvas.width = this.computerCanvas.width = this.globalWidth</span><br><span class="line">    style.height = this.renderCanvas.height = this.computerCanvas.height = this.globalHeight</span><br><span class="line"></span><br><span class="line">    document.body.append(this.renderCanvas)</span><br><span class="line"></span><br><span class="line">    window.addEventListener(<span class="string">&#x27;mousedown&#x27;</span>, this.handleMouseDown.bind(this))</span><br><span class="line">    window.addEventListener(<span class="string">&#x27;pagehide&#x27;</span>, this.handlePageHide.bind(this))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">    this.running = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">if</span> (this.booms.length == 0) &#123;</span><br><span class="line">      <span class="built_in">return</span> this.running = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    requestAnimationFrame(this.run.bind(this))</span><br><span class="line"></span><br><span class="line">    this.computerContext.clearRect(0, 0, this.globalWidth, this.globalHeight)</span><br><span class="line">    this.renderContext.clearRect(0, 0, this.globalWidth, this.globalHeight)</span><br><span class="line"></span><br><span class="line">    this.booms.forEach((boom, index) =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (boom.stop) &#123;</span><br><span class="line">        <span class="built_in">return</span> this.booms.splice(index, 1)</span><br><span class="line">      &#125;</span><br><span class="line">      boom.move()</span><br><span class="line">      boom.draw()</span><br><span class="line">    &#125;)</span><br><span class="line">    this.renderContext.drawImage(this.computerCanvas, 0, 0, this.globalWidth, this.globalHeight)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const cursorSpecialEffects = new CursorSpecialEffects()</span><br><span class="line">cursorSpecialEffects.init()</span><br></pre></td></tr></table></figure>
+<p>explosion.min.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;use strict&quot;</span>;<span class="keyword">function</span> updateCoords(e)&#123;pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;<span class="keyword">function</span> setParticuleDirection(e)&#123;var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;<span class="built_in">return</span>&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;<span class="keyword">function</span> createParticule(e,t)&#123;var a=&#123;&#125;;<span class="built_in">return</span> a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=<span class="function"><span class="title">function</span></span>()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()&#125;,a&#125;<span class="keyword">function</span> createCircle(e,t)&#123;var a=&#123;&#125;;<span class="built_in">return</span> a.x=e,a.y=t,a.color=<span class="string">&quot;#F00&quot;</span>,a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=<span class="function"><span class="title">function</span></span>()&#123;ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1&#125;,a&#125;<span class="keyword">function</span> renderParticule(e)&#123;<span class="keyword">for</span>(var t=0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;<span class="keyword">function</span> animateParticules(e,t)&#123;<span class="keyword">for</span>(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:<span class="keyword">function</span>(e)&#123;<span class="built_in">return</span> e.endPos.x&#125;,y:<span class="keyword">function</span>(e)&#123;<span class="built_in">return</span> e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:<span class="string">&quot;easeOutExpo&quot;</span>,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:<span class="string">&quot;linear&quot;</span>,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:<span class="string">&quot;easeOutExpo&quot;</span>,update:renderParticule,offset:0&#125;)&#125;<span class="keyword">function</span> debounce(e,t)&#123;var a;<span class="built_in">return</span> <span class="function"><span class="title">function</span></span>()&#123;var n=this,i=arguments;clearTimeout(a),a=setTimeout(<span class="function"><span class="title">function</span></span>()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl=document.querySelector(<span class="string">&quot;.fireworks&quot;</span>);<span class="keyword">if</span>(canvasEl)&#123;var ctx=canvasEl.getContext(<span class="string">&quot;2d&quot;</span>),numberOfParticules=30,pointerX=0,pointerY=0,tap=<span class="string">&quot;mousedown&quot;</span>,colors=[<span class="string">&quot;#FF1461&quot;</span>,<span class="string">&quot;#18FF92&quot;</span>,<span class="string">&quot;#5A87FF&quot;</span>,<span class="string">&quot;#FBF38C&quot;</span>],setCanvasSize=debounce(<span class="function"><span class="title">function</span></span>()&#123;canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+<span class="string">&quot;px&quot;</span>,canvasEl.style.height=window.innerHeight+<span class="string">&quot;px&quot;</span>,canvasEl.getContext(<span class="string">&quot;2d&quot;</span>).scale(2,2)&#125;,500),render=anime(&#123;duration:1/0,update:<span class="function"><span class="title">function</span></span>()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,<span class="keyword">function</span>(e)&#123;<span class="string">&quot;sidebar&quot;</span>!==e.target.id&amp;&amp;<span class="string">&quot;toggle-sidebar&quot;</span>!==e.target.id&amp;&amp;<span class="string">&quot;A&quot;</span>!==e.target.nodeName&amp;&amp;<span class="string">&quot;IMG&quot;</span>!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(<span class="string">&quot;resize&quot;</span>,setCanvasSize,!1)&#125;<span class="string">&quot;use strict&quot;</span>;<span class="keyword">function</span> updateCoords(e)&#123;pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;<span class="keyword">function</span> setParticuleDirection(e)&#123;var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;<span class="built_in">return</span>&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;<span class="keyword">function</span> createParticule(e,t)&#123;var a=&#123;&#125;;<span class="built_in">return</span> a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=<span class="function"><span class="title">function</span></span>()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()&#125;,a&#125;<span class="keyword">function</span> createCircle(e,t)&#123;var a=&#123;&#125;;<span class="built_in">return</span> a.x=e,a.y=t,a.color=<span class="string">&quot;#F00&quot;</span>,a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=<span class="function"><span class="title">function</span></span>()&#123;ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1&#125;,a&#125;<span class="keyword">function</span> renderParticule(e)&#123;<span class="keyword">for</span>(var t=0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;<span class="keyword">function</span> animateParticules(e,t)&#123;<span class="keyword">for</span>(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:<span class="keyword">function</span>(e)&#123;<span class="built_in">return</span> e.endPos.x&#125;,y:<span class="keyword">function</span>(e)&#123;<span class="built_in">return</span> e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:<span class="string">&quot;easeOutExpo&quot;</span>,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:<span class="string">&quot;linear&quot;</span>,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:<span class="string">&quot;easeOutExpo&quot;</span>,update:renderParticule,offset:0&#125;)&#125;<span class="keyword">function</span> debounce(e,t)&#123;var a;<span class="built_in">return</span> <span class="function"><span class="title">function</span></span>()&#123;var n=this,i=arguments;clearTimeout(a),a=setTimeout(<span class="function"><span class="title">function</span></span>()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl=document.querySelector(<span class="string">&quot;.fireworks&quot;</span>);<span class="keyword">if</span>(canvasEl)&#123;var ctx=canvasEl.getContext(<span class="string">&quot;2d&quot;</span>),numberOfParticules=30,pointerX=0,pointerY=0,tap=<span class="string">&quot;mousedown&quot;</span>,colors=[<span class="string">&quot;#FF1461&quot;</span>,<span class="string">&quot;#18FF92&quot;</span>,<span class="string">&quot;#5A87FF&quot;</span>,<span class="string">&quot;#FBF38C&quot;</span>],setCanvasSize=debounce(<span class="function"><span class="title">function</span></span>()&#123;canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+<span class="string">&quot;px&quot;</span>,canvasEl.style.height=window.innerHeight+<span class="string">&quot;px&quot;</span>,canvasEl.getContext(<span class="string">&quot;2d&quot;</span>).scale(2,2)&#125;,500),render=anime(&#123;duration:1/0,update:<span class="function"><span class="title">function</span></span>()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,<span class="keyword">function</span>(e)&#123;<span class="string">&quot;sidebar&quot;</span>!==e.target.id&amp;&amp;<span class="string">&quot;toggle-sidebar&quot;</span>!==e.target.id&amp;&amp;<span class="string">&quot;A&quot;</span>!==e.target.nodeName&amp;&amp;<span class="string">&quot;IMG&quot;</span>!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(<span class="string">&quot;resize&quot;</span>,setCanvasSize,!1)&#125;;</span><br></pre></td></tr></table></figure>
+<p>love.min.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="keyword">function</span>(e,t,a)&#123;<span class="keyword">function</span> <span class="function"><span class="title">n</span></span>()&#123;c(<span class="string">&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#x27;&#x27;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;</span>),o(),r()&#125;<span class="keyword">function</span> <span class="function"><span class="title">r</span></span>()&#123;<span class="keyword">for</span>(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=<span class="string">&quot;left:&quot;</span>+d[e].x+<span class="string">&quot;px;top:&quot;</span>+d[e].y+<span class="string">&quot;px;opacity:&quot;</span>+d[e].alpha+<span class="string">&quot;;transform:scale(&quot;</span>+d[e].scale+<span class="string">&quot;,&quot;</span>+d[e].scale+<span class="string">&quot;) rotate(45deg);background:&quot;</span>+d[e].color+<span class="string">&quot;;z-index:99999&quot;</span>);requestAnimationFrame(r)&#125;<span class="keyword">function</span> <span class="function"><span class="title">o</span></span>()&#123;var t=<span class="string">&quot;function&quot;</span>==typeof e.onclick&amp;&amp;e.onclick;e.οnclick=<span class="keyword">function</span>(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="keyword">function</span> i(e)&#123;var a=t.createElement(<span class="string">&quot;div&quot;</span>);a.className=<span class="string">&quot;heart&quot;</span>,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;<span class="keyword">function</span> c(e)&#123;var a=t.createElement(<span class="string">&quot;style&quot;</span>);a.type=<span class="string">&quot;text/css&quot;</span>;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">&quot;head&quot;</span>)[0].appendChild(a)&#125;<span class="keyword">function</span> <span class="function"><span class="title">s</span></span>()&#123;<span class="built_in">return</span><span class="string">&quot;rgb(&quot;</span>+~~(255*Math.random())+<span class="string">&quot;,&quot;</span>+~~(255*Math.random())+<span class="string">&quot;,&quot;</span>+~~(255*Math.random())+<span class="string">&quot;)&quot;</span>&#125;var d=[];e.requestAnimationFrame=<span class="function"><span class="title">function</span></span>()&#123;<span class="built_in">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="keyword">function</span>(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+<p>text.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var a_idx = 0;</span><br><span class="line">jQuery(document).ready(<span class="keyword">function</span>($) &#123;</span><br><span class="line">  $(<span class="string">&quot;body&quot;</span>).click(<span class="keyword">function</span>(e) &#123;</span><br><span class="line">    var a = new Array(<span class="string">&quot;富强&quot;</span>, <span class="string">&quot;民主&quot;</span>, <span class="string">&quot;文明&quot;</span>, <span class="string">&quot;和谐&quot;</span>, <span class="string">&quot;自由&quot;</span>, <span class="string">&quot;平等&quot;</span>, <span class="string">&quot;公正&quot;</span> ,<span class="string">&quot;法治&quot;</span>, <span class="string">&quot;爱国&quot;</span>, <span class="string">&quot;敬业&quot;</span>, <span class="string">&quot;诚信&quot;</span>, <span class="string">&quot;友善&quot;</span>);</span><br><span class="line">    var <span class="variable">$i</span> = $(<span class="string">&quot;&lt;span/&gt;&quot;</span>).text(a[a_idx]);</span><br><span class="line">    var x = e.pageX,</span><br><span class="line">      y = e.pageY;</span><br><span class="line">    <span class="variable">$i</span>.css(&#123;</span><br><span class="line">      <span class="string">&quot;z-index&quot;</span>: 99999,</span><br><span class="line">      <span class="string">&quot;top&quot;</span>: y - 28,</span><br><span class="line">      <span class="string">&quot;left&quot;</span>: x - a[a_idx].length * 8,</span><br><span class="line">      <span class="string">&quot;position&quot;</span>: <span class="string">&quot;absolute&quot;</span>,</span><br><span class="line">      <span class="string">&quot;color&quot;</span>: <span class="string">&quot;#ff7a45&quot;</span></span><br><span class="line">    &#125;);</span><br><span class="line">    $(<span class="string">&quot;body&quot;</span>).append(<span class="variable">$i</span>);</span><br><span class="line">    <span class="variable">$i</span>.animate(&#123;</span><br><span class="line">      <span class="string">&quot;top&quot;</span>: y - 180,</span><br><span class="line">      <span class="string">&quot;opacity&quot;</span>: 0</span><br><span class="line">    &#125;, 1500, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      <span class="variable">$i</span>.remove();</span><br><span class="line">    &#125;);</span><br><span class="line">    a_idx = (a_idx + 1) % a.length;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <div>
+  	
+    <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;">-------------------本文结束 <i class="fa fa-heart"></i> 感谢阅读-------------------</div>
+    
+</div>
+  	
+	</div>
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="白菜 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="白菜 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>白菜
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://s1mpleqaq.cn/post/95c33a87/" title="next 鼠标点击特效">http://s1mpleqaq.cn/post/95c33a87/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/next/" rel="tag"><i class="fa fa-tag"></i> next</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/b24ce228/" rel="prev" title="hexo+next v7.8美化(1)">
+      <i class="fa fa-chevron-left"></i> hexo+next v7.8美化(1)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/post/1a33eb6e/" rel="next" title="hexo+next 7.8美化(2)">
+      hexo+next 7.8美化(2) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白菜"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">白菜</p>
+  <div class="site-description" itemprop="description">可能你不快乐，可我要你快乐</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/s1mpleQWQ" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;s1mpleQWQ" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:xingbaoling123@outlook.com" title="E-Mail → mailto:xingbaoling123@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/%E7%99%BD%E8%8F%9C%E6%83%B3%E8%A6%81%E5%AD%A6%E4%B9%A0" title="新浪微博 → https:&#x2F;&#x2F;weibo.com&#x2F;白菜想要学习" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>新浪微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://live.bilibili.com/21018945" title="B站 → http:&#x2F;&#x2F;live.bilibili.com&#x2F;21018945" rel="noopener" target="_blank"><i class="fa fa-fw fa-bilibili"></i>B站</a>
+      </span>
+  </div>
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github%E4%B8%AA%E4%BA%BA%E4%BB%A4%E7%89%8C/" rel="tag">github个人令牌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/" rel="tag">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9C%8B%E6%9D%BF%E5%A8%98/" rel="tag">看板娘</a><span class="tag-list-count">2</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+      </div>
+
+  
+   
+ 
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">白菜</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">72k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:11</span>
+</div>
+
+<span class="post-meta-divider">|</span>
+<span id="busuanzi_container_site_pv">
+  <span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+  </span>
+  访问量：<span id="busuanzi_value_site_pv"></span> 次数
+</span>
+
+<span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">
+  访客数：<span id="busuanzi_value_site_uv"></span> 人次
+</span>
+<div>
+
+<div class="BbeiAn-info">
+    蜀ICP备 -
+    <a target="_blank" href="http://www.miitbeian.gov.cn/" style="color:#f0d784"  rel="nofollow">2020036052 号-1</a> 
+  <!--a标签中增加nofollow属性，避免爬虫出站。--> 
+  <!-- <a target="_blank" href="http://www.beian.gov.cn/portal/
+  registerSystemInfo?recordcode=2020036052"
+  style="color:#f0d784;text-decoration:none;padding-left:30px;background:url(
+  https://s1.ax1x.com/2018/09/29/ilmwIH.png) no-repeat left center" rel="nofollow">蜀公网安备 你自己的备案号</a>  -->  
+  <!--这里将图标作为了背景，以使得能和后面的文字在同一行-->
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+  <!-- 樱花特效 -->
+  
+      <script async src="/js/fairyDustCursor.js"></script>
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.mini.js"></script>
+
+
+  
+    <script src="/js/love.min.js"></script>
+  
+
+
+
+
+<!-- 音频播放 -->
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+
+
+</body>
+</html>

@@ -499,7 +499,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;699716432&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FFD700&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:280px&quot; &quot;preload:auto&quot; &quot;autoplay&quot; &quot;listfolded&quot;   %&#125;</span><br><span class="line">&#x2F;&#x2F;需要自动播放则添加&quot;autoplay&quot;即可</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 
-    <div id="aplayer-XNhsyOXl" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
+    <div id="aplayer-WrxouRmI" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
 
 
 
@@ -928,6 +928,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1186,6 +1187,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9edb250d1d2047f527e6',
+      clientSecret: 'b581237e85c8f09c67853fff4cc18a5f0efb0903',
+      repo        : 's1mpleQAQ.github.io',
+      owner       : 's1mpleQWQ',
+      admin       : ['s1mpleQWQ'],
+      id          : 'd229a388cbd088fc9372833fccb03d95',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 
   <!-- 樱花特效 -->

@@ -234,7 +234,7 @@
       
       <div class="post-body">
           
-    <div id="aplayer-dnNPTFUX" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="7897891078" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="280px" data-preload="auto listfolded" data-theme="#FFD700"></div>
+    <div id="aplayer-JAXKFDSc" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="7897891078" data-server="tencent" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="280px" data-preload="auto listfolded" data-theme="#FFD700"></div>
 
 
       </div>
@@ -251,6 +251,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -508,6 +509,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '9edb250d1d2047f527e6',
+      clientSecret: 'b581237e85c8f09c67853fff4cc18a5f0efb0903',
+      repo        : 's1mpleQAQ.github.io',
+      owner       : 's1mpleQWQ',
+      admin       : ['s1mpleQWQ'],
+      id          : 'bc28f0b278f80b0333842bb95fd38cd0',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 
   <!-- 樱花特效 -->

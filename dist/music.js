@@ -2,7 +2,7 @@ const ap = new APlayer({
     container: document.getElementById('aplayer'),
     fixed: true,				//吸底模式			
     autoplay: false,            //自动播放
-    lrcType: 1,   //歌词载入模式 1为直接在JS文件中写入，3为lrc文件使用但是我总是失败
+    lrcType: 3,   //歌词载入模式 1为直接在JS文件中写入，3为lrc文件使用但是我总是失败
     audio: [
       {
         name: "尘埃",

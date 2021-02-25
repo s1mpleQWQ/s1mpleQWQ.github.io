@@ -366,7 +366,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;699716432&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FFD700&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:280px&quot; &quot;preload:auto&quot; &quot;autoplay&quot; &quot;listfolded&quot;   %&#125;</span><br><span class="line">&#x2F;&#x2F;需要自动播放则添加&quot;autoplay&quot;即可</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 
-    <div id="aplayer-zHCHuVxu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
+    <div id="aplayer-XNhsyOXl" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
 
 
 
@@ -917,8 +917,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1109,14 +1109,15 @@
 <p>4、编辑主题的配置文件<code>_config.yml</code> </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
 <p>5.保存之后执行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code> 查看效果</p>
-<h3 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h3>]]></content>
+<p>大功告成</p>
+]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
         <tag>看板娘</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1158,7 +1159,7 @@
 </blockquote>
 <h3 id="修改看板娘布局和样式"><a href="#修改看板娘布局和样式" class="headerlink" title="修改看板娘布局和样式"></a>修改看板娘布局和样式</h3><p>在 <code>waifu.css</code> 中修改：</p>
 <p><img src="http://cdn.s1mpleqaq.cn/20210225092335.png" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L0t2Rm1wazVyc3pIaS5wbmc#pic_center" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225131319.png" alt="mark"></p>
 <p>更多的修改可以自行修改哦~</p>
 <h3 id="暂存提交推送三连"><a href="#暂存提交推送三连" class="headerlink" title="暂存提交推送三连"></a>暂存提交推送三连</h3><p>修改完成后，将修改暂存，然后提交，最后<strong>一定要推送到远程库</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;modify position to right&quot;</span></span><br><span class="line">git push origin master</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
@@ -1177,9 +1178,9 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
         <tag>看板娘</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>

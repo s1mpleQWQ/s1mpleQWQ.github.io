@@ -33,20 +33,20 @@
 <meta property="og:site_name" content="白菜想要学习">
 <meta property="og:description" content="写在前面aplayer是一个非常漂亮好用的HTML5音乐播放器，和dplayer师出同门，本篇主要分享一下自己搭建到hexo上的一些经验。部署dplayer的方式我是用的hexo插件，部署aplayer的方式我是用的提取dist文件。这样可以相互参考，喜欢哪种方式部署就用哪种。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215130835022.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215130853391.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215130920966.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215130932698.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215131146392.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215131156771.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215131205710.png">
-<meta property="og:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215131213421.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092923.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092927.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092931.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092935.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092940.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092944.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092947.png">
+<meta property="og:image" content="http://cdn.s1mpleqaq.cn/20210225092950.png">
 <meta property="article:published_time" content="2021-02-14T14:16:06.177Z">
-<meta property="article:modified_time" content="2021-02-15T09:14:40.975Z">
+<meta property="article:modified_time" content="2021-02-25T01:29:54.139Z">
 <meta property="article:author" content="白菜">
 <meta property="article:tag" content="next">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.s1mpleqaq.cn/post/cb99cf62/Users/s1mpleQAQ/Pictures/photos/image-20210215130835022.png">
+<meta name="twitter:image" content="http://cdn.s1mpleqaq.cn/20210225092923.png">
 
 <link rel="canonical" href="http://www.s1mpleqaq.cn/post/cb99cf62/">
 
@@ -254,7 +254,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-15 17:14:40" itemprop="dateModified" datetime="2021-02-15T17:14:40+08:00">2021-02-15</time>
+                <time title="修改时间：2021-02-25 09:29:54" itemprop="dateModified" datetime="2021-02-25T09:29:54+08:00">2021-02-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -313,23 +313,23 @@
 <h2 id="修改aplayer样式"><a href="#修改aplayer样式" class="headerlink" title="修改aplayer样式"></a>修改aplayer样式</h2><p>普通模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;),</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130835022.png" alt="image-20210215130835022"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092923.png" alt="image-20210215130835022"></p>
 <p>播放列表模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    listFolded: false,&#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90,&#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;此为歌词格式，没有歌词可以直接删掉这一行</span><br><span class="line">    audio: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;,</span><br><span class="line">            artist: &#39;artist1&#39;,</span><br><span class="line">            url: &#39;url1.mp3&#39;,</span><br><span class="line">            cover: &#39;cover1.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;,</span><br><span class="line">            theme: &#39;#ebd0c2&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;,</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130853391.png" alt="image-20210215130853391"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092927.png" alt="image-20210215130853391"></p>
 <p>吸底模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    fixed: true,</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130920966.png" alt="image-20210215130920966"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092931.png" alt="image-20210215130920966"></p>
 <p>迷你模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    mini: true,</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130932698.png" alt="image-20210215130932698"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092935.png" alt="image-20210215130932698"></p>
 <h2 id="其他参数修改"><a href="#其他参数修改" class="headerlink" title="其他参数修改"></a>其他参数修改</h2><p>其他参数解释都能在官方文档里面查看，我再赘述一遍吧。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;), &#x2F;&#x2F;播放器容器元素</span><br><span class="line">    mini: false, &#x2F;&#x2F;迷你模式</span><br><span class="line">    autoplay: false, &#x2F;&#x2F;自动播放</span><br><span class="line">    theme: &#39;#FADFA3&#39;, &#x2F;&#x2F;主题色</span><br><span class="line">    loop: &#39;all&#39;, &#x2F;&#x2F;音频循环播放, 可选值: &#39;all&#39;全部循环, &#39;one&#39;单曲循环, &#39;none&#39;不循环</span><br><span class="line">    order: &#39;random&#39;, &#x2F;&#x2F;音频循环顺序, 可选值: &#39;list&#39;列表循环, &#39;random&#39;随机循环</span><br><span class="line">    preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;</span><br><span class="line">    volume: 0.7, &#x2F;&#x2F;默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">    mutex: true, &#x2F;&#x2F;互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器</span><br><span class="line">    listFolded: false, &#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90, &#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;歌词传递方式</span><br><span class="line">    audio: [ &#x2F;&#x2F;音频信息,包含以下</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;, &#x2F;&#x2F;音频名称</span><br><span class="line">            artist: &#39;artist1&#39;, &#x2F;&#x2F;音频艺术家</span><br><span class="line">            url: &#39;url1.mp3&#39;, &#x2F;&#x2F;音频外链</span><br><span class="line">            cover: &#39;cover1.jpg&#39;, &#x2F;&#x2F;音频封面</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;, &#x2F;&#x2F;音频歌词，配合上面的lrcType使用</span><br><span class="line">            theme: &#39;#ebd0c2&#39; &#x2F;&#x2F;切换到此音频时的主题色，比上面的 theme 优先级高</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;, &#x2F;&#x2F;如果只有一首歌，删掉这一块，如有更多歌曲按此格式逐渐往下添加</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>更多有趣的功能自己去发掘吧。</p>
@@ -340,14 +340,14 @@
 
 <p>将放置代码放在不同的<code>~/hexo/themes/next/layout/***.swig</code>文件内会有不同的效果。</p>
 <p>例1：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131146392.png" alt="image-20210215131146392"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092940.png" alt="image-20210215131146392"></p>
 <p>例2：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131156771.png" alt="image-20210215131156771"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092944.png" alt="image-20210215131156771"></p>
 <p>例3：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131205710.png" alt="image-20210215131205710"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092947.png" alt="image-20210215131205710"></p>
 <p>每个人使用的主题不一样，要根据自己的主题去调试。例如我用的是next-mist主题，且喜欢放置在侧边栏。那么在<code>~/hexo/themes/next/layout/_marco</code>文件夹下找到<code>sidebar.swig</code>文件。</p>
 <p>如果要放置在侧边栏的<code>友链</code>下面,那么在<code>sidebar.swig</code>中找到<code>if theme.links</code>，将放置代码添加到<code>endif</code>之后。如下图：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131213421.png" alt="image-20210215131213421"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092950.png" alt="image-20210215131213421"></p>
 <p>如要放置到<code>RSS</code>下就在<code>sidebar.swig</code>中搜索<code>if theme.rss</code>，也是添加到<code>endif</code>之后。</p>
 <p>想放在其他更多的位置上就自己去尝试吧。</p>
 <p>　</p>
@@ -505,13 +505,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -527,7 +527,7 @@
         <a href="https://weibo.com/%E7%99%BD%E8%8F%9C%E6%83%B3%E8%A6%81%E5%AD%A6%E4%B9%A0" title="新浪微博 → https:&#x2F;&#x2F;weibo.com&#x2F;白菜想要学习" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>新浪微博</a>
       </span>
       <span class="links-of-author-item">
-        <a href="http://live.bilibili.com/21018945" title="B站 → http:&#x2F;&#x2F;live.bilibili.com&#x2F;21018945" rel="noopener" target="_blank"><i class="fa fa-fw fa-bilibili"></i>B站</a>
+        <a href="http://live.bilibili.com/21018945" title="B站 → http:&#x2F;&#x2F;live.bilibili.com&#x2F;21018945" rel="noopener" target="_blank"><i class="fa fa-fw fa-thumbs-o-up"></i>B站</a>
       </span>
   </div>
 
@@ -539,7 +539,7 @@
     <h3 class="widget-title">标签云</h3>
     <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github%E4%B8%AA%E4%BA%BA%E4%BB%A4%E7%89%8C/" rel="tag">github个人令牌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/" rel="tag">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9C%8B%E6%9D%BF%E5%A8%98/" rel="tag">看板娘</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github%E4%B8%AA%E4%BA%BA%E4%BB%A4%E7%89%8C/" rel="tag">github个人令牌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/" rel="tag">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jdk/" rel="tag">jdk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kali/" rel="tag">kali</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/root/" rel="tag">root</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9C%8B%E6%9D%BF%E5%A8%98/" rel="tag">看板娘</a><span class="tag-list-count">2</span></li></ul>
         </canvas>
     </div>
 </div>
@@ -576,13 +576,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">75k</span>
+    <span title="站点总字数">73k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:16</span>
+    <span title="站点阅读时长">2:12</span>
 </div>
 
 <span class="post-meta-divider">|</span>

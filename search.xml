@@ -101,12 +101,12 @@
   <entry>
     <title>修复Hexo Next 主题中文目录点击失效</title>
     <url>/post/dd8ad78c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-7e53b0b40f42f846e47830a093c4512c_b.png" alt="img"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="http://cdn.s1mpleqaq.cn/20210225092204.png" alt="img"></p>
 <a id="more"></a>
 
 <h1 id="修复方法"><a href="#修复方法" class="headerlink" title="修复方法"></a>修复方法</h1><p>在 Hexo 更新至 5.x 版本，Next 更新至 7.x 版本后，会出现文章的中文目录点击跳转失效的 bug。</p>
 <p>目前官方已经给出解决方法。如图，在 themes/next/source/js/util.js 中增加两行代码，删除两行代码。保存，hexo clean &amp; hexo g &amp; hexo s 即可解决。（如果还是不行就删除浏览器缓存重试）</p>
-<p><img src="/post/dd8ad78c/Users\s1mpleQAQ\Pictures\photos\v2-ec91a773f9377ce1a93f8da896ec6d80_720w.jpg" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092210.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
@@ -133,23 +133,23 @@
 <h2 id="修改aplayer样式"><a href="#修改aplayer样式" class="headerlink" title="修改aplayer样式"></a>修改aplayer样式</h2><p>普通模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;),</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130835022.png" alt="image-20210215130835022"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092923.png" alt="image-20210215130835022"></p>
 <p>播放列表模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    listFolded: false,&#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90,&#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;此为歌词格式，没有歌词可以直接删掉这一行</span><br><span class="line">    audio: [</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;,</span><br><span class="line">            artist: &#39;artist1&#39;,</span><br><span class="line">            url: &#39;url1.mp3&#39;,</span><br><span class="line">            cover: &#39;cover1.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;,</span><br><span class="line">            theme: &#39;#ebd0c2&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;,</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130853391.png" alt="image-20210215130853391"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092927.png" alt="image-20210215130853391"></p>
 <p>吸底模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    fixed: true,</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130920966.png" alt="image-20210215130920966"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092931.png" alt="image-20210215130920966"></p>
 <p>迷你模式代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;player&#39;),</span><br><span class="line">    mini: true,</span><br><span class="line">    audio: [&#123;</span><br><span class="line">        name: &#39;name&#39;,</span><br><span class="line">        artist: &#39;artist&#39;,</span><br><span class="line">        url: &#39;url.mp3&#39;,</span><br><span class="line">        cover: &#39;cover.jpg&#39;,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
 <p>效果如下：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215130932698.png" alt="image-20210215130932698"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092935.png" alt="image-20210215130932698"></p>
 <h2 id="其他参数修改"><a href="#其他参数修改" class="headerlink" title="其他参数修改"></a>其他参数修改</h2><p>其他参数解释都能在官方文档里面查看，我再赘述一遍吧。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copyconst ap &#x3D; new APlayer(&#123;</span><br><span class="line">    container: document.getElementById(&#39;aplayer&#39;), &#x2F;&#x2F;播放器容器元素</span><br><span class="line">    mini: false, &#x2F;&#x2F;迷你模式</span><br><span class="line">    autoplay: false, &#x2F;&#x2F;自动播放</span><br><span class="line">    theme: &#39;#FADFA3&#39;, &#x2F;&#x2F;主题色</span><br><span class="line">    loop: &#39;all&#39;, &#x2F;&#x2F;音频循环播放, 可选值: &#39;all&#39;全部循环, &#39;one&#39;单曲循环, &#39;none&#39;不循环</span><br><span class="line">    order: &#39;random&#39;, &#x2F;&#x2F;音频循环顺序, 可选值: &#39;list&#39;列表循环, &#39;random&#39;随机循环</span><br><span class="line">    preload: &#39;auto&#39;, &#x2F;&#x2F;预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;</span><br><span class="line">    volume: 0.7, &#x2F;&#x2F;默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span><br><span class="line">    mutex: true, &#x2F;&#x2F;互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器</span><br><span class="line">    listFolded: false, &#x2F;&#x2F;列表默认折叠</span><br><span class="line">    listMaxHeight: 90, &#x2F;&#x2F;列表最大高度</span><br><span class="line">    lrcType: 3, &#x2F;&#x2F;歌词传递方式</span><br><span class="line">    audio: [ &#x2F;&#x2F;音频信息,包含以下</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name1&#39;, &#x2F;&#x2F;音频名称</span><br><span class="line">            artist: &#39;artist1&#39;, &#x2F;&#x2F;音频艺术家</span><br><span class="line">            url: &#39;url1.mp3&#39;, &#x2F;&#x2F;音频外链</span><br><span class="line">            cover: &#39;cover1.jpg&#39;, &#x2F;&#x2F;音频封面</span><br><span class="line">            lrc: &#39;lrc1.lrc&#39;, &#x2F;&#x2F;音频歌词，配合上面的lrcType使用</span><br><span class="line">            theme: &#39;#ebd0c2&#39; &#x2F;&#x2F;切换到此音频时的主题色，比上面的 theme 优先级高</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: &#39;name2&#39;, &#x2F;&#x2F;如果只有一首歌，删掉这一块，如有更多歌曲按此格式逐渐往下添加</span><br><span class="line">            artist: &#39;artist2&#39;,</span><br><span class="line">            url: &#39;url2.mp3&#39;,</span><br><span class="line">            cover: &#39;cover2.jpg&#39;,</span><br><span class="line">            lrc: &#39;lrc2.lrc&#39;,</span><br><span class="line">            theme: &#39;#46718b&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>更多有趣的功能自己去发掘吧。</p>
@@ -160,14 +160,14 @@
 
 <p>将放置代码放在不同的<code>~/hexo/themes/next/layout/***.swig</code>文件内会有不同的效果。</p>
 <p>例1：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131146392.png" alt="image-20210215131146392"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092940.png" alt="image-20210215131146392"></p>
 <p>例2：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131156771.png" alt="image-20210215131156771"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092944.png" alt="image-20210215131156771"></p>
 <p>例3：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131205710.png" alt="image-20210215131205710"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092947.png" alt="image-20210215131205710"></p>
 <p>每个人使用的主题不一样，要根据自己的主题去调试。例如我用的是next-mist主题，且喜欢放置在侧边栏。那么在<code>~/hexo/themes/next/layout/_marco</code>文件夹下找到<code>sidebar.swig</code>文件。</p>
 <p>如果要放置在侧边栏的<code>友链</code>下面,那么在<code>sidebar.swig</code>中找到<code>if theme.links</code>，将放置代码添加到<code>endif</code>之后。如下图：</p>
-<p><img src="/post/cb99cf62/Users\s1mpleQAQ\Pictures\photos\image-20210215131213421.png" alt="image-20210215131213421"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092950.png" alt="image-20210215131213421"></p>
 <p>如要放置到<code>RSS</code>下就在<code>sidebar.swig</code>中搜索<code>if theme.rss</code>，也是添加到<code>endif</code>之后。</p>
 <p>想放在其他更多的位置上就自己去尝试吧。</p>
 <p>　</p>
@@ -190,24 +190,24 @@
 
 <h2 id="直接使用网易云音乐外链播放器"><a href="#直接使用网易云音乐外链播放器" class="headerlink" title="直接使用网易云音乐外链播放器"></a>直接使用网易云音乐外链播放器</h2><hr>
 <ol>
-<li>在网页网易云搜索歌曲点击生成外链播放器：<a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825112549.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825112549.png" alt="img"></a></li>
+<li>在网页网易云搜索歌曲点击生成外链播放器：<a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825112549.png"><img src="http://cdn.s1mpleqaq.cn/20210225093049.png" alt="img"></a></li>
 <li>进行尺寸和播放模式设置后复制HEML代码，添加进文章的合适位置即可。</li>
 </ol>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825113213.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825113213.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825113213.png"><img src="http://cdn.s1mpleqaq.cn/20210225093055.png" alt="img"></a></p>
 <h2 id="因为版权问题有时不能使用网易云的解决方法："><a href="#因为版权问题有时不能使用网易云的解决方法：" class="headerlink" title="因为版权问题有时不能使用网易云的解决方法："></a>因为版权问题有时不能使用网易云的解决方法：</h2><hr>
 <p><strong>思路：获得MP3，歌词，封面文件，上传到你的私人云端获得外链。使用Aplayer插件进行插入播放器，下面给出的是几种免费获得文件的方法</strong></p>
 <h3 id="Ⅰ-首先获得音乐MP3文件，和歌词Lrc和封面文件"><a href="#Ⅰ-首先获得音乐MP3文件，和歌词Lrc和封面文件" class="headerlink" title="Ⅰ.首先获得音乐MP3文件，和歌词Lrc和封面文件"></a>Ⅰ.首先获得音乐MP3文件，和歌词Lrc和封面文件</h3><h4 id="获得MP3和LRC方法一：网易云链接替换"><a href="#获得MP3和LRC方法一：网易云链接替换" class="headerlink" title="获得MP3和LRC方法一：网易云链接替换"></a>获得MP3和LRC方法一：网易云链接替换</h4><h5 id="1-获得歌曲mp3文件"><a href="#1-获得歌曲mp3文件" class="headerlink" title="1.获得歌曲mp3文件"></a>1.获得歌曲mp3文件</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;你需要的网易云歌曲的ID.mp3</span><br></pre></td></tr></table></figure>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825193732.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825193732.png" alt="img"></a></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825193755.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825193755.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825193732.png"><img src="http://cdn.s1mpleqaq.cn/20210225093059.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825193755.png"><img src="http://cdn.s1mpleqaq.cn/20210225093105.png" alt="img"></a></p>
 <p>下载MP3文件即可。</p>
 <p><a href="https://music.liuzhijin.cn/"><strong>也可以使用该网站获取MP3</strong></a></p>
 <h5 id="2-获得歌词lrc文件"><a href="#2-获得歌词lrc文件" class="headerlink" title="2.获得歌词lrc文件"></a>2.获得歌词lrc文件</h5><p>浏览器输入<code>http://music.163.com/api/song/media?id=你的网易云歌曲ID</code></p>
 <p>得到下面页面</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213220.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213220.png" alt="img"></a>从第一个<code>[HH:MM:SS]</code> 开始复制，到最后的<code>[HH:MM:SS]</code>和之后的一句歌词为止截取复制，新建DOC文档，粘贴进去，就是获取<code>lyric:&quot;........&quot;</code> 中的部分：</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213508.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213508.png" alt="img"></a>**使用替换功能：将<code>\n</code>替换为<code>特殊格式：段落标记**</code></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213756.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213756.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213220.png"><img src="http://cdn.s1mpleqaq.cn/20210225093109.png" alt="img"></a>从第一个<code>[HH:MM:SS]</code> 开始复制，到最后的<code>[HH:MM:SS]</code>和之后的一句歌词为止截取复制，新建DOC文档，粘贴进去，就是获取<code>lyric:&quot;........&quot;</code> 中的部分：</p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213508.png"><img src="http://cdn.s1mpleqaq.cn/20210225093113.png" alt="img"></a>**使用替换功能：将<code>\n</code>替换为<code>特殊格式：段落标记**</code></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213756.png"><img src="http://cdn.s1mpleqaq.cn/20210225093116.png" alt="img"></a></p>
 <p><strong>得到歌词文件，下图为部分歌词：</strong></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213909.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213909.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825213909.png"><img src="http://cdn.s1mpleqaq.cn/20210225093121.png" alt="img"></a></p>
 <p><strong>之后改名，保存为lrc文件即可手工得到歌词文件</strong></p>
 <blockquote>
 <p>如果发现歌词出现乱码，在保存的时候选择另存为，然后点击底部的工具选项，选择Web选项，将编码设置为Unicode(UTF-8)即可。</p>
@@ -216,7 +216,7 @@
 <p>最近发现了一个获取歌词新方法：使用这个软件可以直接下载网易云的歌曲歌词，还带翻译，**<a href="https://github.com/GameBelial/ZonyLrcToolsX">点我进入该大佬项目</a>**下载使用即可。推荐使用插件中的歌单歌词下载功能，然后新建一个歌单，把你想下载歌词的歌放进去，通过该方法可以不用通过本地文件下载。下载的歌词在软件文件夹下的<code>Lyrics</code>文件夹中。</p>
 </blockquote>
 <h4 id="获得MP3和LRC方法二：使用Music-tools"><a href="#获得MP3和LRC方法二：使用Music-tools" class="headerlink" title="获得MP3和LRC方法二：使用Music tools"></a>获得MP3和LRC方法二：使用Music tools</h4><p><a href="http://www.yeyulingfeng.com/4317.html">软件下载地址</a></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825171935.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825171935.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825171935.png"><img src="http://cdn.s1mpleqaq.cn/20210225093126.png" alt="img"></a></p>
 <p><strong>使用软件下载音乐，同时会自动下载歌词lrc文件。</strong></p>
 <p>缺点是偶尔会有下载不了的情况，还有些情况会发现下载的是翻唱</p>
 <h4 id="获取封面图片"><a href="#获取封面图片" class="headerlink" title="获取封面图片"></a>获取封面图片</h4><ul>
@@ -239,7 +239,7 @@
 </ul>
 <h3 id="Ⅱ-将上面获得的文件上传至你的私人云端获得外链（由于当时建立图床的时候用了腾讯云COS，现在正好就一起用了）"><a href="#Ⅱ-将上面获得的文件上传至你的私人云端获得外链（由于当时建立图床的时候用了腾讯云COS，现在正好就一起用了）" class="headerlink" title="Ⅱ.将上面获得的文件上传至你的私人云端获得外链（由于当时建立图床的时候用了腾讯云COS，现在正好就一起用了）"></a>Ⅱ.将上面获得的文件上传至你的私人云端<strong>获得外链</strong>（<strong>由于当时建立图床的时候用了腾讯云COS，现在正好就一起用了</strong>）</h3><p>使用<strong>方法一也可以不用下载和上传音乐，直接使用：<code>http://music.163.com/song/media/outer/url?id=你需要的网易云歌曲的ID.mp3</code>也可以的</strong></p>
 <p>在云储存里获得<code>Mp3链接</code>和<code>Lrc歌词链接</code> <strong>这里我直接使用了COSBrowser 工具进行上传和获取链接，很方便</strong></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825120742.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825120742.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825120742.png"><img src="http://cdn.s1mpleqaq.cn/20210225093131.png" alt="img"></a></p>
 <h3 id="Ⅲ-安装插件，在文章里写入即可"><a href="#Ⅲ-安装插件，在文章里写入即可" class="headerlink" title="Ⅲ.安装插件，在文章里写入即可"></a>Ⅲ.安装插件，在文章里写入即可</h3><p>在<strong>站点文件夹</strong>下：<code>$ npm install hexo-tag-aplayer --save</code></p>
 <p>文章里的写入操作：</p>
 <p>单曲：</p>
@@ -263,7 +263,7 @@
 <li><p>ID获取</p>
 <p>网易云为例：</p>
 <p>打开你的歌单浏览器地址栏就会显示你的歌单ID：</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825171439.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825171439.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825171439.png"><img src="http://cdn.s1mpleqaq.cn/20210225093145.png" alt="img"></a></p>
 </li>
 <li><p>在你的文章中写入代码</p>
 </li>
@@ -365,58 +365,11 @@
 <p><strong>例如我的设置：</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;699716432&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FFD700&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:280px&quot; &quot;preload:auto&quot; &quot;autoplay&quot; &quot;listfolded&quot;   %&#125;</span><br><span class="line">&#x2F;&#x2F;需要自动播放则添加&quot;autoplay&quot;即可</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
-<p>Be Alright - MADILYN</p>
-<p>I look up from the ground (我的目光，离地望你)</p>
-<p>To see your sad and teary eyes (见你悲伤而泪水模糊的眼睛)</p>
-<p>You look away from me (你避开目光)</p>
-<p>I see there’s something you’re tryna hide (我知你隐瞒了事情)</p>
-<p>I reach for your hand but it’s cold (抓住你的手，深感到了寒意)</p>
-<p>You pull away again (你却再次，把手抽离)</p>
-<p>And I wonder what’s on your mind (我想要知道你的思绪)</p>
-<p>And then you say to me you made a dumb mistake (你便对我说，你犯下了一个愚蠢的错误)</p>
-<p>You start to tremble and your voice begins to break (你开始颤抖着，带着破碎的嗓音)</p>
-<p>You say the cigarettes on the counter weren’t your friend’s (你说柜台上的香烟不是你朋友的)</p>
-<p>They were my mate’s (而是我伴侣的)</p>
-<p>And I feel the color draining from my face (我的脸色渐变苍白)</p>
-<p>And my friend said (我的朋友们说)</p>
-<p>“I know you love him, but it’s over, mate (我知道你爱他，但都结束了，伙计)</p>
-<p>It doesn’t matter, put the phone away (没关系，关掉手机)</p>
-<p>It’s never easy to walk away, let him go (离开从来都不简单，放手吧)</p>
-<p>It’ll be alright” (会好的)</p>
-<p>So I still look back at all the messages you’ve sent (所以我仍然会翻阅你发过的所有信息)</p>
-<p>And I know it wasn’t right, but it was messing with my head (我也知道这不对，但是它让我思绪不宁)</p>
-<p>Everything deleted like the past, yeah, it was gone (一切像过去一样被删除，是啊，一去不返)</p>
-<p>And when I touched your face, I could tell you’re moving on (当我触摸你的脸庞，我能看出你的心早已走远)</p>
-<p>But it’s not the fact that you kissed her yesterday (但这不是你昨天吻她的事实)</p>
-<p>It’s the feeling of betrayal, that I just can’t seem to shake (这背叛的感觉，我似乎不能摆脱)</p>
-<p>And everything I know tells me that I should walk away (我了解的一切都告诉我要离开)</p>
-<p>But I just want to stay (但我只想留下)</p>
-<p>And my friend said (而我的朋友说)</p>
-<p>“I know you love him, but it’s over, mate (我知道你爱他，但一切都结束了，朋友)</p>
-<p>It doesn’t matter, put the phone away (没关系，放下手机)</p>
-<p>It’s never easy to walk away, let him go (离开从不简单，放手吧)</p>
-<p>It’ll be alright (会好的)</p>
-<p>It’s gonna hurt for a bit of time (它只会让你受伤一会儿)</p>
-<p>So bottoms up, let’s forget tonight (所以干杯吧，忘了今晚)</p>
-<p>You’ll find another and you’ll be just fine (你会找到另一个爱人然后你会一切如常)</p>
-<p>Let him go” (放手吧)</p>
-<p>And nothing heals the past like time (没有什么像时间一样能治愈过去)</p>
-<p>And they can’t steal (而且它们偷不走)</p>
-<p>The love you’re born to find (你生命中注定的爱情)</p>
-<p>And nothing heals the past like time (没有什么像时间一样能治愈过去)</p>
-<p>And they can’t steal (而且它们偷不走)</p>
-<p>The love you’re born to find (你生命中注定的爱情)</p>
-<p>“I know you love him, but it’s over, mate (我知道你爱他，但一切都结束了，朋友)</p>
-<p>It doesn’t matter, put the phone away (没关系，放下手机)</p>
-<p>It’s never easy to walk away, let him go (离开从不简单，放手吧)</p>
-<p>It’s gonna hurt for a bit of time (它只会让你受伤一会儿)</p>
-<p>So bottoms up, let’s forget tonight (所以干杯吧，忘了今晚)</p>
-<p>You’ll find another and you’ll be just fine (你会找到另一个爱人然后你会一切如常)</p>
-<p>Let him go” (别再留恋他)</p>
-<p>Nothing heals the past like time (没有什么像时间一样能治愈过去)</p>
-<p>It’ll be alright (会好的)</p>
-<p>It’ll be alright (会好的)</p>
-<p>00:00 / 03:16 </p>
+
+    <div id="aplayer-zHCHuVxu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
+
+
+
 <blockquote>
 <p>更多使用请阅读：<a href="https://github.com/MoePlayer/hexo-tag-aplayer#customization-new-in-30">Aplayer</a></p>
 <p><strong>注意：一个文档里面不支持包含metingJS、Aplayer同时播放</strong></p>
@@ -449,7 +402,7 @@
 <blockquote>
 <p><strong>直接在网易云网站搜索生成外链就行，也不用想去生成跨版权播放器，生成了也播放不了。</strong></p>
 </blockquote>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825215333.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825215333.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190825215333.png"><img src="http://cdn.s1mpleqaq.cn/20210225093330.png" alt="img"></a></p>
 <h2 id="使用audio标签修改"><a href="#使用audio标签修改" class="headerlink" title="使用audio标签修改"></a>使用audio标签修改</h2><p>同样的文件，同样的位置，添加下面代码</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.links %&#125;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;links-of-blogroll-title&quot;&gt;</span><br><span class="line">       ....省略部分代码</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;ul class&#x3D;&quot;links-of-blogroll-list&quot;&gt;</span><br><span class="line">        ....省略部分代码</span><br><span class="line">      &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">&#x2F;&#x2F;添加</span><br><span class="line">    &lt;div id&#x3D;&quot;music163player&quot;&gt;</span><br><span class="line">    &lt;audio src&#x3D;&quot;http:&#x2F;&#x2F;music.163.com&#x2F;song&#x2F;media&#x2F;outer&#x2F;url?id&#x3D;你的网易云歌曲ID.mp3&quot; style&#x3D;&quot;max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;&quot; controls&#x3D;&quot;controls&quot; loop&#x3D;&quot;loop&quot; preload&#x3D;&quot;meta&quot;&gt;Your browser does not support the audio tag.&lt;&#x2F;audio&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"> &#x2F;&#x2F;结束</span><br></pre></td></tr></table></figure>
 <p><code>src=&quot;http://什么什么.mp3&quot;</code>可自行更改，若想自动播放则在<code>src=&quot;http://什么什么.mp3&quot;</code> 之后添加<code>autoplay</code>即可</p>
@@ -482,9 +435,9 @@
 </ol>
 </blockquote>
 <p>首先用<strong>谷歌浏览器</strong>打开网易云搜索你的歌曲，在封面处右键选则<code>检查</code>选项</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826142950.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826142950.png" alt="img"></a></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826143323.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826143323.png" alt="img"></a></p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826143408.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826143408.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826142950.png"><img src="http://cdn.s1mpleqaq.cn/20210225093338.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826143323.png"><img src="http://cdn.s1mpleqaq.cn/20210225093345.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190826143408.png"><img src="http://cdn.s1mpleqaq.cn/20210225093349.png" alt="img"></a></p>
 <p><strong><code>ctrl+c</code>复制即可，黏贴在cover中</strong></p>
 <h1 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h1><hr>
 <h2 id="设置打赏功能"><a href="#设置打赏功能" class="headerlink" title="设置打赏功能"></a>设置打赏功能</h2><p>在<strong>主题配置文件</strong><code>_config.yml</code> 下，搜索<code>reward_settings</code> 进行修改:</p>
@@ -572,7 +525,7 @@
 <p>打开：<code>/blog/themes/next/layout/_macro</code> 目录下的<code>post.swig</code>文件，定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>标签下，插入如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">  &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">  &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>例：</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190827222222.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190827222222.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190827222222.png"><img src="http://cdn.s1mpleqaq.cn/20210225093416.png" alt="img"></a></p>
 </li>
 <li><p>修改模板文件，方便以后使用</p>
 <p>在根目录下<code>scaffolds</code>文件夹打开<code>post.md</code>,增加top属性</p>
@@ -589,7 +542,7 @@
 </li>
 <li><p>选择City版（免费），安装。（会生成 来必力City版安装代码以及 data-uid ，或者 进入管理页面-&gt;代码管理-&gt;一般网站，可以查看）</p>
 </li>
-<li><p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828093624.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828093624.png" alt="img"></a></p>
+<li><p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828093624.png"><img src="http://cdn.s1mpleqaq.cn/20210225093422.png" alt="img"></a></p>
 </li>
 <li><p>然后打开主题目录的配置文件<code>/next/_config.yml</code>，定位到<code>livere_uid</code>字段，将UID填入即可</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># LiveRe comments system</span><br><span class="line"># You can get your uid from https:&#x2F;&#x2F;livere.com&#x2F;insight&#x2F;myCode (General web site)</span><br><span class="line">livere_uid: &#x2F;&#x2F;填写你的UID</span><br></pre></td></tr></table></figure></li>
@@ -601,12 +554,12 @@
 </ol>
 <h1 id="预览文章标题与文章留白间距修改"><a href="#预览文章标题与文章留白间距修改" class="headerlink" title="预览文章标题与文章留白间距修改"></a>预览文章标题与文章留白间距修改</h1><hr>
 <p>默认留白太大了，不美观，我们自行修改。</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828121428.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828121428.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828121428.png"><img src="http://cdn.s1mpleqaq.cn/20210225093427.png" alt="img"></a></p>
 <p>在<code>themes\next\source\css\_custom</code>打开<code>custom.styl</code>文件</p>
 <p>添加：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.posts-expand .post-meta &#123;</span><br><span class="line">  margin: 10px 0 10px 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>效果:</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828122511.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828122511.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828122511.png"><img src="http://cdn.s1mpleqaq.cn/20210225093434.png" alt="img"></a></p>
 <p>觉得不够的话自己修改值就行。</p>
 <h1 id="写文章时文字增加背景色块"><a href="#写文章时文字增加背景色块" class="headerlink" title="写文章时文字增加背景色块"></a>写文章时文字增加背景色块</h1><hr>
 <ol>
@@ -675,9 +628,9 @@
 <p>修改后需要重新<code>hexo s</code>才会显示</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  style: flat &#x2F;&#x2F;选择你的样式simple&#x2F;modern&#x2F;flat</span><br><span class="line">  icons: false &#x2F;&#x2F;是否开启note图标显示。</span><br><span class="line">  border_radius: 3</span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: 0</span><br></pre></td></tr></table></figure>
 <p>图标显示:</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828175034.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828175034.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828175034.png"><img src="http://cdn.s1mpleqaq.cn/20210225093455.png" alt="img"></a></p>
 <p>不显示：</p>
-<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828175117.png"><img src="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828175117.png" alt="img"></a></p>
+<p><a href="https://lyxf2000-1259802619.cos.ap-beijing.myqcloud.com/20190828175117.png"><img src="http://cdn.s1mpleqaq.cn/20210225093459.png" alt="img"></a></p>
 <p>note样式自行选择不再演示。</p>
 <h2 id="主题自带样式lable标签"><a href="#主题自带样式lable标签" class="headerlink" title="主题自带样式lable标签"></a>主题自带样式lable标签</h2><p><strong>主题配置文件</strong> 中需要配置下，没有自行添加:</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Label tag.</span><br><span class="line">label: true</span><br></pre></td></tr></table></figure>
@@ -769,8 +722,10 @@
     <title>next 鼠标点击特效</title>
     <url>/post/95c33a87/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在<code>\themes\next\layout_layout.swig</code>文件里内部引用：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.cursor_effect %&#125;</span><br><span class="line">  &#123;% if theme.cursor_effect.type &#x3D;&#x3D; &quot;fireworks&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;explosion&quot; %&#125;</span><br><span class="line">    &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;explosion.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;love&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;love.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;text&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> &lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;love.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.cursor_effect %&#125;</span><br><span class="line">  &#123;% if theme.cursor_effect.type &#x3D;&#x3D; &quot;fireworks&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;explosion&quot; %&#125;</span><br><span class="line">    &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;explosion.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;love&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;love.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;text&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<!--more-->
 
 <p>在主题 <code>next.yml</code>l中添加动态配置项</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.cursor_effect %&#125;</span><br><span class="line">  &#123;% if theme.cursor_effect.type &#x3D;&#x3D; &quot;fireworks&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;explosion&quot; %&#125;</span><br><span class="line">    &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;explosion.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;love&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;love.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% elseif theme.cursor_effect.type &#x3D;&#x3D; &quot;text&quot; %&#125;</span><br><span class="line">    &lt;script src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
@@ -946,9 +901,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Css</span><br><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
 <p>编辑 <code>hexo/source/_data/next.yml</code> 主题配置文件，添加下面配置：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css</span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br><span class="line">    - &#39;**&#x2F;fireworks.js&#39;</span><br></pre></td></tr></table></figure>
-<h2 id="3-34首页顶部留白"><a href="#3-34首页顶部留白" class="headerlink" title="3.34首页顶部留白"></a>3.34首页顶部留白</h2><p>顶部留白个人感觉更好看，同样找到<code>_other.styl</code>（之前自己加的，可以看此篇文章开头）</p>
-<p>效果：</p>
-<p><img src="/post/b24ce228/Users\s1mpleQAQ\AppData\Roaming\Typora\typora-user-images\image-20210214211010556.png" alt="image-20210214211010556"></p>
+<h2 id="3-34首页顶部留白"><a href="#3-34首页顶部留白" class="headerlink" title="3.34首页顶部留白"></a>3.34首页顶部留白</h2><p>顶部留白个人感觉更好看，同样找到<code>_other.styl</code></p>
 <p>加上如下代码：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//首页顶部留白</span></span><br><span class="line">.container&#123;margin-top:10px;&#125; </span><br></pre></td></tr></table></figure>
 <h2 id="3-35首页banner渐变色"><a href="#3-35首页banner渐变色" class="headerlink" title="3.35首页banner渐变色"></a>3.35首页banner渐变色</h2><p>效果：</p>
@@ -964,8 +917,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>next</tag>
         <tag>hexo</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -978,17 +931,17 @@
 <li><p><a href="https://nodejs.org/en/">Node.js</a> （点击进入官网下载）博主版本号为 <strong>Node.js 12.18.2 LTS</strong></p>
 <a id="more"></a>
 
-<p><a href="https://pic.heson10.com/img/image-20200708231743517.png"><img src="https://pic.heson10.com/img/image-20200708231743517.png" alt="image-20200708231743517"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708231743517.png"><img src="http://cdn.s1mpleqaq.cn/20210225091855.png" alt="image-20200708231743517"></a></p>
 <p>在 Windows 环境下安装 Node.js 非常简单，仅须到官网下载安装文件并执行即可完成安装。</p>
 </li>
 <li><p><a href="https://git-scm.com/downloads">Git</a>（点击进入官网下载）版本号为<strong>2.27.0</strong></p>
-<p><a href="https://pic.heson10.com/img/image-20200708231819287.png"><img src="https://pic.heson10.com/img/image-20200708231819287.png" alt="image-20200708231819287"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708231819287.png"><img src="http://cdn.s1mpleqaq.cn/20210225092009.png" alt="image-20200708231819287"></a></p>
 <p><a href="https://jingyan.baidu.com/article/90895e0fb3495f64ed6b0b50.html">GIT安装教程</a></p>
 </li>
 </ul>
 <h2 id="安装Hexo-版本4-2-1"><a href="#安装Hexo-版本4-2-1" class="headerlink" title="安装Hexo (版本4.2.1)"></a>安装Hexo (版本4.2.1)</h2><ul>
 <li><p>在任意盘新建hexo文件夹并右键，选择Bit Bash Here，如图：</p>
-<p><a href="https://pic.heson10.com/img/image-20200708232535741.png"><img src="https://pic.heson10.com/img/image-20200708232535741.png" alt="image-20200708232535741"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708232535741.png"><img src="http://cdn.s1mpleqaq.cn/20210225092016.png" alt="image-20200708232535741"></a></p>
 </li>
 <li><p>输入安装hexo命令</p>
 </li>
@@ -1001,7 +954,7 @@
 <p>这样就可以到<a href="http://localhost:4000/">http://localhost:4000/</a> 查看了</p>
 <p><strong>2020/11/9日更新：</strong></p>
 <p>如果<code>hexo init</code>出现下面报错：</p>
-<p><a href="https://picup.heson10.com/img/upyun/2020/11/image-20201109184629487.png"><img src="https://picup.heson10.com/img/upyun/2020/11/image-20201109184629487.png" alt="image-20201109184629487"></a></p>
+<p><a href="https://picup.heson10.com/img/upyun/2020/11/image-20201109184629487.png"><img src="http://cdn.s1mpleqaq.cn/20210225092112.png" alt="image-20201109184629487"></a></p>
 <p>要挂上梯子才能继续。</p>
 <h2 id="Github-设置"><a href="#Github-设置" class="headerlink" title="Github 设置"></a>Github 设置</h2><h3 id="GitHub的优点"><a href="#GitHub的优点" class="headerlink" title="GitHub的优点"></a>GitHub的优点</h3><p>GitHub是基于git实现的代码托管。git可能是目前最好用的版本控制系统了，非常受欢迎。</p>
 <p>GitHub可以免费使用，并且快速稳定。</p>
@@ -1017,7 +970,7 @@
 <li><h3 id="创建项目仓库"><a href="#创建项目仓库" class="headerlink" title="创建项目仓库"></a>创建项目仓库</h3><p>在创建博客之前，还需要用已有的帐号创建一个项目，上面那个链接的projectName将是这里即将创建的项目名称。</p>
 <p>在Git中，项目被称为仓库(Repository)，仓库顾名思义，当然可以包含代码或者非代码。将来我们的网页或者模板实际上都是保存在这个仓库中的。</p>
 <p>登录后，访问<a href="https://github.com/new">https://github.com/new</a> ，创建仓库如下图：</p>
-<p><a href="https://pic.heson10.com/img/image-20200708235116025.png"><img src="https://pic.heson10.com/img/image-20200708235116025.png" alt="image-20200708235116025"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708235116025.png"><img src="http://cdn.s1mpleqaq.cn/20210225092122.png" alt="image-20200708235116025"></a></p>
 <p><strong>注意Repository name这里一定要填写username.github.io 这样后面才能使用Github Pages功能。</strong></p>
 <p>每个帐号只能有一个仓库来存放个人主页，而且仓库的名字必须是username/username.github.io，这是特殊的命名约定。你可以通过<a href="http://username.github.io/">http://username.github.io</a> 来访问你的个人主页。</p>
 <p>创建了仓库后，我们就需要管理它，无论是管理本地仓库还是远程仓库都需要Git客户端；Git客户端实际上十分强大，它本身就可以offline的创建本地仓库，而本地仓库和远程仓库之间的同步也是通过Git客户端完成的。</p>
@@ -1035,18 +988,18 @@
 <p>然后拷贝key（key是以ssr（应该是这个开头的）开头 你的邮箱结尾的一长串字符。</p>
 </li>
 <li><h3 id="在GitHub上添加SSH密钥"><a href="#在GitHub上添加SSH密钥" class="headerlink" title="在GitHub上添加SSH密钥"></a>在GitHub上添加SSH密钥</h3><p>在<a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 下 add new ssh key</p>
-<p><a href="https://pic.heson10.com/img/image-20200708235604290.png"><img src="https://pic.heson10.com/img/image-20200708235604290.png" alt="image-20200708235604290"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708235604290.png"><img src="http://cdn.s1mpleqaq.cn/20210225092133.png" alt="image-20200708235604290"></a></p>
 <p>title可随意填写，key就是我们拷贝的key</p>
 <p>接下来测试一下是否配置正确。</p>
 <p>输入一下命令：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
 <p>成功后大概会出现一下内容：（可能会有部分不一致）</p>
-<p><a href="https://pic.heson10.com/img/image-20200708235845417.png"><img src="https://pic.heson10.com/img/image-20200708235845417.png" alt="image-20200708235845417"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708235845417.png"><img src="http://cdn.s1mpleqaq.cn/20210225092136.png" alt="image-20200708235845417"></a></p>
 </li>
 </ul>
 <h2 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h2><ul>
 <li><h3 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h3><p>编辑 你所建立的hexo文件夹中_config.yml（用记事本打开）修改deployment部分。</p>
-<p><a href="https://pic.heson10.com/img/image-20200708235946378.png"><img src="https://pic.heson10.com/img/image-20200708235946378.png" alt="image-20200708235946378"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200708235946378.png"><img src="http://cdn.s1mpleqaq.cn/20210225092140.png" alt="image-20200708235946378"></a></p>
 <p>自行替换成你的GitHub的名称。注意：每个：后面必须有一个空格！！！</p>
 </li>
 <li><h3 id="安装Git包"><a href="#安装Git包" class="headerlink" title="安装Git包"></a>安装Git包</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
@@ -1063,7 +1016,7 @@
 <p>加上现在Typora可以联合Picgo实现快速上传图片到图床，简直是神器。放出截图：</p>
 <ul>
 <li><p>Typora截图</p>
-<p><a href="https://pic.heson10.com/img/image-20200709000943792.png"><img src="https://pic.heson10.com/img/image-20200709000943792.png" alt="image-20200709000943792"></a></p>
+<p><a href="https://pic.heson10.com/img/image-20200709000943792.png"><img src="http://cdn.s1mpleqaq.cn/20210225092144.png" alt="image-20200709000943792"></a></p>
 </li>
 </ul>
 ]]></content>
@@ -1093,35 +1046,35 @@
 <ol>
 <li>在任何页面的右上角，单击您的个人资料照片，然后单击 <strong>Settings（设置）</strong>。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003532701778.png" alt="用户栏中的 Settings 图标"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093659.png" alt="用户栏中的 Settings 图标"></p>
 <ol>
 <li>在左侧边栏中，单击 <strong>Developer settings</strong>。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003539369603.png" alt="开发者设置"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093702.png" alt="开发者设置"></p>
 <ol>
 <li>在左侧边栏中，单击 <strong>Personal access tokens（个人访问令牌）</strong>。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003545995040.png" alt="个人访问令牌"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093705.png" alt="个人访问令牌"></p>
 <ol>
 <li>单击 <strong>Generate new token（生成新令牌）</strong>。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003552731520.png" alt="生成新令牌按钮"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093709.png" alt="生成新令牌按钮"></p>
 <ol>
 <li>给令牌一个描述性名称。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003559583850.png" alt="令牌说明字段"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093714.png" alt="令牌说明字段"></p>
 <ol>
 <li>选择要授予此令牌的作用域或权限。 要使用令牌从命令行访问仓库，请选择 <strong>repo（仓库）</strong>。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003566157473.gif" alt="选择令牌作用域"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093717.gif" alt="选择令牌作用域"></p>
 <ol>
 <li>单击 <strong>Generate token（生成令牌）</strong>。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003573201357.png" alt="生成令牌按钮"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093724.png" alt="生成令牌按钮"></p>
 <ol>
 <li>单击 <img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003517998063.png" alt="save">将令牌复制到剪贴板。 出于安全原因，离开此页面后，您将无法再次看到令牌。</li>
 </ol>
-<p><img src="https://atts.w3cschool.cn/attachments/image/20200821/1598003582296572.png" alt="新创建的令牌"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225093727.png" alt="新创建的令牌"></p>
 <blockquote>
 <p><strong>警告：</strong> 像对待密码一样对待您的令牌，确保其机密性。 使用 API 时，应将令牌用作环境变量，而不是将其硬编码到程序中。</p>
 </blockquote>
@@ -1142,7 +1095,7 @@
       </tags>
   </entry>
   <entry>
-    <title>看板娘设置(2)</title>
+    <title>hexo+next+看板娘设置(2)</title>
     <url>/post/cf4ab21c/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="看板娘安装教程"><a href="#看板娘安装教程" class="headerlink" title="看板娘安装教程"></a>看板娘安装教程</h3><p>1、把大神已修改好的代码托管在Github <a href="https://github.com/stevenjoezhang/live2d-widget">源码</a>  下载到hexo目录下的<code>/themes/icarus/source</code>下,                  下载好的文件名<code>live2d-widget</code> </p>
 <p>2、进入<code>live2d-widget</code> 修改`autoload.js’</p>
@@ -1161,9 +1114,9 @@
         <category>博客搭建</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>next</tag>
         <tag>看板娘</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1173,7 +1126,7 @@
 <a id="more"></a>
 
 <p>首先访问 <a href="https://github.com/stevenjoezhang/live2d-widget">live2d-widget</a> 的 Github 仓库，点击右上角 <code>Fork</code> 该项目到自己的仓库：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L2JpMlB4eThoRldqUy5wbmc" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092317.png" alt="mark"></p>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L3RTTVZJb0p2b3ZVaC5wbmc" alt="mark"></p>
 <h1 id="2-向-Next-中添加看板娘"><a href="#2-向-Next-中添加看板娘" class="headerlink" title="2. 向 Next 中添加看板娘"></a>2. 向 Next 中添加看板娘</h1><p>修改 <code>/themes/hexo-theme-next/layout/_layout.swing</code> 文件，在最后添加下面这行代码：</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Mculover666/live2d-widget/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
@@ -1183,7 +1136,7 @@
 <h1 id="3-使能看板娘"><a href="#3-使能看板娘" class="headerlink" title="3. 使能看板娘"></a>3. 使能看板娘</h1><p>编辑<strong>主题配置文件</strong> <code>/themes/hexo-theme-next/_config.yml</code>，添加如下内容：</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># 自定义看板娘</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
 <p>这个时候重新生成并部署博客，就可以看到博客左下角出现一个看板娘了哈哈。</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L21TUXFLdXNhRkFkci5naWY#pic_center" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092326.gif" alt="mark"></p>
 <p><strong>这个看板娘是默认的，在左下角，如果想要修改它的位置，大小，说话内容，该如何办呢？</strong></p>
 <h1 id="4-定制一个属于你自己的看板娘"><a href="#4-定制一个属于你自己的看板娘" class="headerlink" title="4. 定制一个属于你自己的看板娘"></a>4. 定制一个属于你自己的看板娘</h1><p>第 1 步中我们fork了看板娘项目到自己的 Github 中，然后使用CDN方式部署到了Hexo博客中，接下来讲述如何进行修改，定制一个属于你自己的看板娘~</p>
 <h2 id="clone-你的项目到本地"><a href="#clone-你的项目到本地" class="headerlink" title="clone 你的项目到本地"></a>clone 你的项目到本地</h2><p>将项目 clone 到本地：</p>
@@ -1204,29 +1157,29 @@
 <p>注意：将CDN路径中的 <code>Mculover666</code> 改为你自己的Github用户名。</p>
 </blockquote>
 <h3 id="修改看板娘布局和样式"><a href="#修改看板娘布局和样式" class="headerlink" title="修改看板娘布局和样式"></a>修改看板娘布局和样式</h3><p>在 <code>waifu.css</code> 中修改：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L1dpOU1udlhibTlTWS5wbmc#pic_center" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092335.png" alt="mark"></p>
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L0t2Rm1wazVyc3pIaS5wbmc#pic_center" alt="mark"></p>
 <p>更多的修改可以自行修改哦~</p>
 <h3 id="暂存提交推送三连"><a href="#暂存提交推送三连" class="headerlink" title="暂存提交推送三连"></a>暂存提交推送三连</h3><p>修改完成后，将修改暂存，然后提交，最后<strong>一定要推送到远程库</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;modify position to right&quot;</span></span><br><span class="line">git push origin master</span><br><span class="line">1234</span><br></pre></td></tr></table></figure>
 <h3 id="发布新版本"><a href="#发布新版本" class="headerlink" title="发布新版本"></a>发布新版本</h3><p>我们是使用了Github免费的CDN服务，所以还需要发布一个新的版本：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L09wMlFtVUxMQVdKNi5wbmc" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L1NzbkJlZnNpZzNQYS5wbmc" alt="mark"></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L2t2TXNBY1Y5d2M5MC5wbmc" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092341.png" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092352.png" alt="mark"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092356.png" alt="mark"></p>
 <h3 id="修改CDN链接"><a href="#修改CDN链接" class="headerlink" title="修改CDN链接"></a>修改CDN链接</h3><p>Github上CDN的使用方式为：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 <p>所以在博客中的<code>/themes/hexo-theme-next/layout/_layout.swing</code>文件中修改CDN链接使用最新的版本：</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/Mculover666/live2d-widget@1.0.0/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
 <h3 id="重新生成部署博客"><a href="#重新生成部署博客" class="headerlink" title="重新生成部署博客"></a>重新生成部署博客</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
-<p>来看看效果哈哈哈，看板娘已经成功的跑到了右边：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL21jdWxvdmVyNjY2LmNuL2ltYWdlLzIwMTkwODE4L3RZUXlNcGhCeTUxei5wbmc" alt="mark"></p>
+<p>来看看效果哈哈哈，看板娘已经成功的跑到了右边：<br><img src="http://cdn.s1mpleqaq.cn/20210225092401.png" alt="mark"></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>next</tag>
         <tag>看板娘</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1236,37 +1189,37 @@
 <a id="more"></a>
 
 <p>比如我是windows系统就选择Windows对应的那个JDK。还有，注意下载JDK版本的位数，如果文件名中有32这串数字的话，那代表这个JDK是32位的，现在大多数操作系统都是64位的，所以建议大家下载64位的JDK。还有个小问题，就是大家下载的时候需要把decline变为accpet,这两者的意思大家都明白。</p>
-<p><img src="https://img-blog.csdn.net/20180601065559541?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092739.png" alt="img"></p>
 <h1 id="2-JDK的安装"><a href="#2-JDK的安装" class="headerlink" title="2.JDK的安装"></a><strong>2.JDK的安装</strong></h1><p>JDK下载完成之后我们就直接打开下载好的安装程序。（我并未用最新的JDK做演示）</p>
-<p><img src="https://img-blog.csdn.net/20180601070039984?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092758.png" alt="img"></p>
 <p>单击下一步。</p>
-<p><img src="https://img-blog.csdn.net/20180601070147339?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092805.png" alt="img"></p>
 <p>单击更改，到这里我们需要更改一下安装路径，可以是任何一个盘的任何一个不含空格路径的文件夹，为了方便起见我就直接把中间的Program Files给删掉了。效果如下</p>
-<p><img src="https://img-blog.csdn.net/20180601070351864?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092809.png" alt="img"></p>
 <p>然后下一步</p>
-<p><img src="https://img-blog.csdn.net/20180601070440728?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092812.png" alt="img"></p>
 <p>等待进度条加载满会弹出一个选择</p>
-<p><img src="https://img-blog.csdn.net/20180601070544844?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092815.png" alt="img"></p>
 <p>这里我们依然将Program文件路径删除，但是我们发现会有问题</p>
-<p><img src="https://img-blog.csdn.net/2018060107073879?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092818.png" alt="img"></p>
 <p>我的解决思路是在java文件夹下新建一个文件夹取名为jre，然后更改为C:Java\jre</p>
-<p><img src="https://img-blog.csdn.net/20180601070851787?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092821.png" alt="img"></p>
 <p>最后，等待安装完成。</p>
-<p><img src="https://img-blog.csdn.net/20180601070945289?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p><img src="https://img-blog.csdn.net/20180601070958229?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092824.png" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092828.png" alt="img"></p>
 <h1 id="3-JDK环境变量的配置"><a href="#3-JDK环境变量的配置" class="headerlink" title="3.JDK环境变量的配置"></a><strong>3.JDK环境变量的配置</strong></h1><p>相信大家也有疑惑，我怎么看不见Java的快捷方式图标呢，为什么我的桌面没有Java程序呢，现在让我来告诉你答案。作为开发学习者，我们忽略了一个重要的东西，java是一个开源平台不是提供音视频、聊天的平台（这只是我个人的看法）。简单来说，JDK是一款非常强大的工具集，我们要使用Java的话就需要安装一些支持Java编程软件eclipse、intellj idea等。然后我们进入正题，来配置环境变量。</p>
 <p>右击我的电脑-&gt;高级系统设置-&gt;环境变量-&gt;新建系统变量-&gt;将新建系统变量添加到path里面去。</p>
-<p><img src="https://img-blog.csdn.net/20180601071804415?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p><img src="https://img-blog.csdn.net/20180601071947532?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092832.png" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092837.png" alt="img"></p>
 <p>java的安装路径包不要搞混了</p>
-<p><img src="https://img-blog.csdn.net/20180601072222390?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092839.png" alt="img"></p>
 <p>找到Path系统变量，点击编辑，然后点击新建。输入%JAVA_HOME%bin。</p>
-<p><img src="https://img-blog.csdn.net/20180601072346832?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092846.png" alt="img"></p>
 <p>完成了之后需要一步一步点确定，直到确定完成才可以说环境变量配置完成。不然的话，就需要重新配置。就好比写Word的时候搞忘了保存而直接关闭，但是word比较人性化退出时候有提示，这个的话需要大家有耐心的做完每一步工作。科普一下，我们如何做到不点击QQ程序图标，就做到命令行打开QQ？找到QQ所在文件夹的bin目录，复制其路径将它添加到Path变量中。由此可得，其他程序亦是如此。</p>
 <h1 id="4-检查是否配置成功。"><a href="#4-检查是否配置成功。" class="headerlink" title="4.检查是否配置成功。"></a>4.检查是否配置成功。</h1><p>win+R 输入cmd -&gt; javac -version</p>
-<p><img src="https://img-blog.csdn.net/20180601072745378?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092851.png" alt="img"></p>
 <p>如果出现</p>
-<p><img src="https://img-blog.csdn.net/20180601072823546?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3ODU0ODk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092854.png" alt="img"></p>
 <p>那么就是环境变量没保存，需要进行步骤3的配置，然后就可以进入java语言的学习了。</p>
 ]]></content>
       <categories>
@@ -1274,6 +1227,7 @@
       </categories>
       <tags>
         <tag>java</tag>
+        <tag>jdk</tag>
       </tags>
   </entry>
   <entry>
@@ -1285,10 +1239,10 @@
 <p><strong>第一种：官网下载</strong><br> 通过<a href="https://nodejs.org/en/">nodejs官网</a>下载安装 ，但有个缺陷，不同版本的nodejs无法顺利的切换。</p>
 <p><strong>第二种: NVM安装</strong><br> NVM可以帮助我们快速切换 node版本。但是安装NVM过程中有很多坑，网上找了很多文档都没解决问题。这里自己总结下，帮助大家顺利安装软件。</p>
 <h3 id="一、-下载nvm安装包"><a href="#一、-下载nvm安装包" class="headerlink" title="一、 下载nvm安装包"></a>一、 下载nvm安装包</h3><p><strong>1. 下载地址</strong><br> github上下载最新版本:<a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
-<p> 推荐下载第三个包：nvm-setup.zip<br><img src="https://img-blog.csdnimg.cn/20190115133257742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p> 推荐下载第三个包：nvm-setup.zip<br><img src="http://cdn.s1mpleqaq.cn/20210225092439.png" alt="在这里插入图片描述"></p>
 <ol>
 <li><p>成功安装的nvm标志<br>命令行：nvm</p>
-<p>成功出现下面的代码<br><img src="https://img-blog.csdnimg.cn/2019011513330537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>成功出现下面的代码<br><img src="http://cdn.s1mpleqaq.cn/20210225092448.png" alt="在这里插入图片描述"></p>
 </li>
 </ol>
 <h3 id="二、配置淘宝镜像"><a href="#二、配置淘宝镜像" class="headerlink" title="二、配置淘宝镜像"></a>二、配置淘宝镜像</h3><p> 由于nvm默认的下载地址<a href="http://nodejs.org/dist/%E6%98%AF%E5%A4%96%E5%9B%BD%E5%A4%96%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E9%80%9F%E5%BA%A6%E9%9D%9E%E5%B8%B8%E6%85%A2%EF%BC%8C%E5%9B%A0%E8%80%8C%E5%8F%AF%E4%BB%A5%E5%88%87%E6%8D%A2%E5%88%B0%E6%B7%98%E5%AE%9D%E7%9A%84%E9%95%9C%E5%83%8F%EF%BC%8C%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E4%BC%9A%E5%BF%AB%E5%BE%88%E5%A4%9A%E3%80%82">http://nodejs.org/dist/是外国外服务器，速度非常慢，因而可以切换到淘宝的镜像，下载速度会快很多。</a></p>
@@ -1296,7 +1250,7 @@
 <p> 打开nvm的安装路径，默认安装路径是：C:\Users\zhong\AppData\Roaming\nvm</p>
 <p> 打开settings.txt，加入下面文件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	root: C:\Users\zhong\AppData\Roaming\nvm  </span><br><span class="line">	path: C:\Program Files\nodejs </span><br><span class="line">	arch: 64 </span><br><span class="line">	proxy: none</span><br><span class="line">	node_mirror: http:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">	npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br><span class="line">123456</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20190116125742381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190116125800543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092457.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190116125800543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="三、-安装node"><a href="#三、-安装node" class="headerlink" title="三、 安装node"></a>三、 安装node</h3><ol>
 <li><p><strong>nvm安装命令：</strong></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> nvm  install version    </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
@@ -1306,14 +1260,14 @@
 <li><p><strong>安装过程中关键点：</strong></p>
 </li>
 </ol>
-<p>   Downloading 代表正在下载npm，一定要等下载完，不然会发现npm将无法使用。<br><img src="https://img-blog.csdnimg.cn/20190116130110558.png" alt="在这里插入图片描述"></p>
-<p>   Installation complete 代表nodejs安装完成<br><img src="https://img-blog.csdnimg.cn/20190116130201729.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>   Downloading 代表正在下载npm，一定要等下载完，不然会发现npm将无法使用。<br><img src="http://cdn.s1mpleqaq.cn/20210225092502.png" alt="在这里插入图片描述"></p>
+<p>   Installation complete 代表nodejs安装完成<br><img src="http://cdn.s1mpleqaq.cn/20210225092505.png" alt="在这里插入图片描述"></p>
 <p><strong>ps：</strong><br> 如果第二步没有设置淘宝镜像，下载速度会很慢。就会像我之前一样，以为安装好了nodejs，就着急的关闭了命令行。最后发现npm却无法适应，找了很久才发现是npm没下完。</p>
 <h3 id="四、-切换nodejs版本"><a href="#四、-切换nodejs版本" class="headerlink" title="四、 切换nodejs版本"></a>四、 切换nodejs版本</h3><ol>
 <li><strong>查询所有的nodejs版本</strong></li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nvm list </span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-<p>nvm list 查看当前安装的所有nodejs版本<br><img src="https://img-blog.csdnimg.cn/20190115133437761.png" alt="在这里插入图片描述"></p>
+<p>nvm list 查看当前安装的所有nodejs版本<br><img src="http://cdn.s1mpleqaq.cn/20210225092509.png" alt="在这里插入图片描述"></p>
 <ol>
 <li><strong>切换nodojs命令</strong></li>
 </ol>
@@ -1330,7 +1284,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NVM_HOME &#x3D; C:\Users\zhong\AppData\Roaming\nvm          </span><br><span class="line">NVM_SYMLINK &#x3D; C:\Program Files\nodejs </span><br><span class="line">Path &#x3D; %NVM_HOME%;%NVM_SYMLINK%</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
 <h3 id="六、测试node，npm是否安装成功"><a href="#六、测试node，npm是否安装成功" class="headerlink" title="六、测试node，npm是否安装成功"></a>六、测试node，npm是否安装成功</h3><p>依次执行node，npm命令，出现下面结果代表成功了</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node</span><br><span class="line">npm</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/2019011613214686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIzOTU4NjI1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092514.png" alt="在这里插入图片描述"></p>
 <p>到这里，nvm，node，npm就都安装成功了。安装失败往往是npm没有下载成功，或者环境变量没有设置成功，多尝试几次就好。</p>
 ]]></content>
       <categories>
@@ -1347,16 +1301,23 @@
 <a id="more"></a>
 
 <p>1、Vmware中启动系统,当出现如下图启动界面时按“E”键，注意要快，如果没赶上则重新启动客户机，重复上述操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716205214199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092646.png" alt="img"></p>
 <p>2、操作1成功后进入如（图1）界面，将光标下移至linux，如（图2），将ro修改为rw，在splash后添加 /init=/bin/bash，注意splash和init之间要加空格。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716205423188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img">   <img src="https://img-blog.csdnimg.cn/20200716205933998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092654.png" alt="img">   <img src="http://cdn.s1mpleqaq.cn/20210225092701.png" alt="img"></p>
 <p>​                （图1）                                            （图2）</p>
 <p>修改后的界面如（图3）所示： </p>
-<p><img src="https://img-blog.csdnimg.cn/20200716210138655.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092707.png" alt="img"></p>
 <p>3、按F10保存，进入单用户模式，在root@（none）：/# 输入passwd，后面在New password：后设置root用户的密码，Retype new password:后重复输入密码确认。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200716210440801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZlbmdmZW5nX195,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><img src="http://cdn.s1mpleqaq.cn/20210225092711.png" alt="img"></p>
 <p>4、完成上述操作后重启客户机即可。</p>
 ]]></content>
+      <categories>
+        <category>kali</category>
+      </categories>
+      <tags>
+        <tag>kali</tag>
+        <tag>root</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>

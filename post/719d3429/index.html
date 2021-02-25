@@ -379,7 +379,6 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -638,26 +637,6 @@
   
 
   
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '9edb250d1d2047f527e6',
-      clientSecret: 'b581237e85c8f09c67853fff4cc18a5f0efb0903',
-      repo        : 's1mpleQAQ.github.io',
-      owner       : 's1mpleQWQ',
-      admin       : ['s1mpleQWQ'],
-      id          : '9dbe5c55f2e6980ef74e4818d035e455',
-        language: 'zh-CN',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
 
   <!-- 樱花特效 -->

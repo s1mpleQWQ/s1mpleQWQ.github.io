@@ -101,9 +101,7 @@
   <entry>
     <title>修复Hexo Next 主题中文目录点击失效</title>
     <url>/post/dd8ad78c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><meta name="referrer" content="no-referrer">
-
-<h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="http://cdn.s1mpleqaq.cn/20210225092204.png" alt="img"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hexo-Next-主题中文目录点击失效"><a href="#Hexo-Next-主题中文目录点击失效" class="headerlink" title="Hexo Next 主题中文目录点击失效"></a>Hexo Next 主题中文目录点击失效</h1><p>如图，点击文章目录下的链接失效。<img src="http://cdn.s1mpleqaq.cn/20210225092204.png" alt="img"></p>
 <a id="more"></a>
 
 <h1 id="修复方法"><a href="#修复方法" class="headerlink" title="修复方法"></a>修复方法</h1><p>在 Hexo 更新至 5.x 版本，Next 更新至 7.x 版本后，会出现文章的中文目录点击跳转失效的 bug。</p>

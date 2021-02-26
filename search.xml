@@ -366,7 +366,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;699716432&quot; &quot;netease&quot; &quot;playlist&quot; &quot;theme:#FFD700&quot; &quot;mode:circulation&quot; &quot;mutex:true&quot; &quot;listmaxheight:280px&quot; &quot;preload:auto&quot; &quot;autoplay&quot; &quot;listfolded&quot;   %&#125;</span><br><span class="line">&#x2F;&#x2F;需要自动播放则添加&quot;autoplay&quot;即可</span><br></pre></td></tr></table></figure>
 <p>效果如下：</p>
 
-    <div id="aplayer-hEFETlFo" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
+    <div id="aplayer-pGIboRYL" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="699716432" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="true" data-listmaxheight="280px" data-preload="auto" data-theme="#FFD700" data-listfolded="true"></div>
 
 
 
@@ -917,8 +917,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1115,8 +1115,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
+        <tag>hexo</tag>
         <tag>看板娘</tag>
       </tags>
   </entry>
@@ -1178,8 +1178,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
+        <tag>hexo</tag>
         <tag>看板娘</tag>
       </tags>
   </entry>

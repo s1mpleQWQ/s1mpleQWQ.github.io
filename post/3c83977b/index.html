@@ -664,7 +664,7 @@
 <script src="../js/Valine.min.js"></script>
 
 <!-- 评论框美化 -->
-    <style>
+<style>
     .v[data-class=v] .veditor {
         background-image: url(https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich30.gif);
         background-size: contain;
@@ -672,7 +672,7 @@
         background-position: right;
     }
     .v .vsubmit.vbtn{border-radius: 0;padding: 0;color: #fff;line-height: 30px;width:55px;border: none;background:  #1E90FF;}
-    </style>
+</style>
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
@@ -688,7 +688,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       notify     : true,
       appId      : 'r8EsHrX5gXjS5txzhfJeqTd6-gzGzoHsz',
       appKey     : '7cPRlEWazEYmMajUz3Ycx75A',
-      placeholder: "",
+      placeholder: '',
       avatar     : 'monsterid',
       meta       : guest,
       pageSize   : '10' || 10,
@@ -953,17 +953,18 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-
 </script>
-<!-- 每日一言：随机返回一句话接口，宅到用来做 Valine 的 placeholder 显示内容 -->
+</script>
+<!-- 今日诗词：随机返回一句古诗词名句的接口，宅到用来做 Valine 的 placeholder 显示内容 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author;
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
     })
-    .catch(console.error)
 </script>
+
+
 
 
 
